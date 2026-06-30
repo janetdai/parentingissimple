@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>服務項目 | 培兒蒂 Parenting is Simple</title>
+  <meta name="description" content="培兒蒂提供兒童遊戲活動、感覺統合、教養諮詢及嚴選教玩具，為孩子量身打造成長應援計畫。">
+  <meta name="keywords" content="兒童職能治療,感統整合,育兒諮詢,教玩具,培兒蒂">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="服務項目 | 培兒蒂 Parenting is Simple">
+  <meta property="og:description" content="全方位兒童成長諮詢，讓育兒不再是單打獨鬥。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://parentingissimple.com/service.html">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:site_name" content="培兒蒂 Parenting is Simple">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  <style>
+    body { background-color: #faf9f6; font-family: 'Be Vietnam Pro', 'Noto Sans TC', sans-serif; padding-top: 0; }
+    .text-pei { color: #4c6455; }
+    .bg-pei   { background-color: #4c6455; }
+    /* Service bento cards */
+    .svc-card {
+      border-radius: 32px;
+      transition: transform .5s ease, box-shadow .5s ease;
+      overflow: hidden;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,.1); }
+
+    /* Testimonial carousel */
+    .testimonial-scroll {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .testimonial-scroll .t-card {
+      width: 400px;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+    }
+    @media (min-width: 768px) {
+      .testimonial-scroll .t-card { width: 400px; }
+    }
+
+    /* CTA calm-navy */
+    .pei-cta-navy {
+      background: #2C3E50;
+      border-radius: 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .pei-cta-navy .deco-1 {
+      position: absolute; top: -3rem; right: -3rem;
+      width: 12rem; height: 12rem;
+      background: rgba(255,255,255,.05);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    .pei-cta-navy .deco-2 {
+      position: absolute; bottom: -3rem; left: -3rem;
+      width: 16rem; height: 16rem;
+      background: rgba(255,255,255,.05);
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    /* FAB */
+    .pei-fab {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 64px; height: 64px;
+      background: #4c6455; color: #fff;
+      border-radius: 50%; border: none;
+      box-shadow: 0 8px 32px rgba(76,100,85,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; z-index: 1050;
+      transition: transform .3s ease;
+    }
+    .pei-fab:hover { transform: scale(1.1); color: #fff; }
+    .pei-fab-tip {
+      position: absolute; right: 4.5rem;
+      background: #fff; color: #4c6455;
+      padding: .4rem 1rem; border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+      white-space: nowrap; font-size: .875rem; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: opacity .3s ease;
+    }
+    .pei-fab:hover .pei-fab-tip { opacity: 1; }
+  </style>
+</head>
+<body class="pei-page">
+
+<div id="site-navbar"></div>
+
+<main style="padding-top:80px;">
+
+  <!-- Hero Section -->
+  <section class="position-relative overflow-hidden" style="padding:4rem 0 6rem;" data-fade>
+    <!-- Decorative -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style="pointer-events:none;z-index:0;">
+      <div class="position-absolute rounded-circle" style="top:2.5rem;left:2.5rem;width:8rem;height:8rem;border:2px solid rgba(143,169,152,.2);"></div>
+      <div class="position-absolute organic-shape-2" style="bottom:5rem;right:2.5rem;width:16rem;height:16rem;background:rgba(242,232,223,.1);"></div>
+      <div class="position-absolute dot-pattern" style="top:25%;right:25%;width:100px;height:100px;opacity:.2;color:#8FA998;"></div>
+    </div>
+
+    <div class="container position-relative" style="max-width:1200px;z-index:1;">
+      <div class="row align-items-center g-5">
+        <!-- Text -->
+        <div class="col-md-6" data-fade data-delay="1">
+          <span class="pei-badge-pill mb-4 d-inline-block">我們的專業服務</span>
+          <h1 class="fw-bold mb-4" style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif;font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:#2C3E50;">
+            為孩子量身打造的<br><span class="text-pei">成長應援計畫</span>
+          </h1>
+          <p class="mb-0" style="font-size:1.125rem;color:#424844;max-width:480px;line-height:1.75;">
+            我們致力於用最溫柔的方式，陪伴家長解決育兒難題，讓職能治療融入日常生活，使「教養」變得簡單而純粹。
+          </p>
+        </div>
+        <!-- Image -->
+        <div class="col-md-6 position-relative" data-fade data-delay="2">
+          <div class="position-absolute organic-shape-1" style="top:50%;left:50%;transform:translate(-50%,-50%);width:18rem;height:18rem;background:rgba(245,225,218,.3);z-index:0;"></div>
+          <img src="assets/images/momandkids.png" alt="療育情境" class="img-fluid position-relative" style="border-radius:40px;box-shadow:0 24px 64px rgba(0,0,0,.12);object-fit:cover;aspect-ratio:4/3;width:100%;z-index:1;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Bento Grid -->
+  <section style="padding:5rem 0 7rem;background:#f5f3f1;" data-fade>
+    <div class="container" style="max-width:1200px;">
+      <div class="text-center mb-5" data-fade>
+        <h2 class="fw-bold mb-3" style="font-size:2rem;color:#2C3E50;">全方位服務項目</h2>
+        <p style="color:#424844;font-size:1rem;">我們提供以下四種核心服務，針對不同階段的發展需求提供支援。</p>
+      </div>
+
+      <!-- Row 1: 7 + 5 -->
+      <div class="row g-4 mb-4">
+        <!-- Service 1 — 兒童遊戲活動 (wide) -->
+        <div class="col-md-7" data-fade data-delay="1">
+          <div class="svc-card bg-white p-4 p-md-5 h-100 shadow-sm">
+            <div class="row align-items-center g-4 h-100">
+              <div class="col-md-7">
+                <div class="d-flex align-items-center justify-content-center mb-4" style="width:48px;height:48px;border-radius:12px;background:#D1E3E7;">
+                  <i class="bi bi-controller fs-4 text-pei"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size:1.25rem;color:#1b1c1b;">兒童遊戲活動</h3>
+                <p class="mb-4" style="font-size:.9375rem;color:#424844;line-height:1.75;">透過分齡設計的趣味活動，在遊戲中激發孩子的專注力與粗細動作發展。我們強調「玩」就是學習的最好方式。</p>
+                <ul class="list-unstyled mb-4">
+                  <li class="d-flex align-items-center gap-2 mb-2 fw-bold text-pei" style="font-size:.875rem;">
+                    <i class="bi bi-check-circle-fill"></i> 發展里程碑評估
+                  </li>
+                  <li class="d-flex align-items-center gap-2 fw-bold text-pei" style="font-size:.875rem;">
+                    <i class="bi bi-check-circle-fill"></i> 分齡小組互動課程
+                  </li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline-success rounded-pill px-4" style="border-color:#4c6455;color:#4c6455;">諮詢報名</a>
+              </div>
+              <div class="col-md-5">
+                <div class="rounded-4 overflow-hidden" style="background:#F2E8DF;aspect-ratio:1/1;">
+                  <img src="assets/images/bricks.png" alt="兒童遊戲活動" class="w-100 h-100" style="object-fit:cover;transition:transform .7s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 — 感覺統合 (narrow, sage-green bg) -->
+        <div class="col-md-5" data-fade data-delay="2">
+          <div class="svc-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background:#8FA998;color:#fff;">
+            <div>
+              <div class="d-flex align-items-center justify-content-center mb-4" style="width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.2);">
+                <i class="bi bi-symmetry-vertical fs-4 text-white"></i>
+              </div>
+              <h3 class="fw-bold mb-3" style="font-size:1.25rem;color:#fff;">感覺統合與處理</h3>
+              <p style="color:rgba(255,255,255,.9);line-height:1.75;">針對觸覺敏感、平衡失調等感覺處理問題，提供個人化的感覺餐建議與環境調整策略。</p>
+            </div>
+            <div class="mt-4">
+              <div class="p-3 mb-4 rounded-3" style="background:rgba(255,255,255,.15);">
+                <p class="fw-bold mb-1" style="font-size:.8125rem;">包含項目：</p>
+                <p class="mb-0" style="font-size:.875rem;">感覺發展量表評估、感覺統合遊戲活動、居家環境建置建議</p>
+              </div>
+              <a href="contact.html" class="btn w-100 fw-bold" style="background:#fff;color:#4c6455;border-radius:9999px;">獲取資訊</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: 5 + 7 -->
+      <div class="row g-4">
+        <!-- Service 3 — 教養諮詢 (narrow, soft-blush bg) -->
+        <div class="col-md-5" data-fade data-delay="1">
+          <div class="svc-card p-4 p-md-5 h-100" style="background:#F5E1DA;">
+            <div class="d-flex align-items-center justify-content-center mb-4" style="width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.5);">
+              <i class="bi bi-chat-heart-fill fs-4" style="color:#785656;"></i>
+            </div>
+            <h3 class="fw-bold mb-3" style="font-size:1.25rem;color:#1b1c1b;">教養諮詢</h3>
+            <p class="mb-4" style="color:#424844;line-height:1.75;">我們聽懂孩子的「話」，更聽懂家長的「心」。提供專業的情緒調節建議與親子溝通技巧。</p>
+            <!-- Avatar stack -->
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <div class="d-flex" style="margin-right:.5rem;">
+                <div class="rounded-circle border border-2 border-white overflow-hidden" style="width:40px;height:40px;margin-right:-8px;background:#cee9d6;display:flex;align-items:center;justify-content:center;font-weight:700;color:#4c6455;">林</div>
+                <div class="rounded-circle border border-2 border-white overflow-hidden" style="width:40px;height:40px;margin-right:-8px;background:#D1E3E7;display:flex;align-items:center;justify-content:center;font-weight:700;color:#4c6455;">張</div>
+                <div class="rounded-circle border border-2 border-white d-flex align-items-center justify-content-center fw-bold text-pei" style="width:40px;height:40px;background:#fff;font-size:.7rem;">+50</div>
+              </div>
+            </div>
+            <p class="mb-4" style="font-size:.8125rem;color:rgba(66,72,68,.7);">已有超過 200 位家長獲得有效的行為改善策略</p>
+            <a href="contact.html" class="btn w-100 fw-bold" style="background:#2C3E50;color:#fff;border-radius:9999px;">育兒諮詢</a>
+          </div>
+        </div>
+
+        <!-- Service 4 — 玩具銷售 (wide) -->
+        <div class="col-md-7" data-fade data-delay="2">
+          <div class="svc-card bg-white p-4 p-md-5 h-100 shadow-sm">
+            <div class="row align-items-center g-4 h-100">
+              <div class="col-md-5">
+                <div class="rounded-4 overflow-hidden position-relative" style="background:#e9e8e5;height:12rem;">
+                  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg,rgba(209,227,231,.2),transparent);z-index:0;"></div>
+                  <img src="assets/images/toys.png" alt="嚴選教玩具" class="w-100 h-100 position-relative" style="object-fit:cover;z-index:1;border-radius:.75rem;">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="d-flex align-items-center justify-content-center mb-4" style="width:48px;height:48px;border-radius:12px;background:#ffdcbd;">
+                  <i class="bi bi-bag-fill fs-4" style="color:#725a41;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size:1.25rem;color:#1b1c1b;">玩具銷售與教具建議</h3>
+                <p class="mb-4" style="font-size:.9375rem;color:#424844;line-height:1.75;">拒絕過度購買，只挑選真正對孩子發展有益的高品質教具。我們為您提供量身定制的玩具組合清單。</p>
+                <div class="d-flex align-items-center gap-4">
+                  <span class="fw-bold text-pei" style="font-size:1.5rem;">NT$ 500 <small class="fw-normal text-muted" style="font-size:.875rem;">起</small></span>
+                  <a href="#" class="text-pei fw-bold text-decoration-underline" style="font-size:.875rem;">查看商店</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="padding:7rem 0;" data-fade>
+    <div class="container" style="max-width:1200px;">
+      <div class="row align-items-start g-5">
+        <!-- Left: heading -->
+        <div class="col-md-4" data-fade data-delay="1">
+          <h2 class="fw-bold mb-4" style="font-size:2rem;color:#2C3E50;line-height:1.3;">看見孩子的<br>一點點改變</h2>
+          <p class="mb-4" style="color:#424844;line-height:1.75;">來自家長們的最真實回饋，見證了培兒蒂所提倡的「簡單即是美」的育兒力量。</p>
+          <div class="d-flex align-items-center gap-1 mb-3">
+            <i class="bi bi-star-fill" style="color:#725a41;"></i>
+            <i class="bi bi-star-fill" style="color:#725a41;"></i>
+            <i class="bi bi-star-fill" style="color:#725a41;"></i>
+            <i class="bi bi-star-fill" style="color:#725a41;"></i>
+            <i class="bi bi-star-fill" style="color:#725a41;"></i>
+            <span class="ms-2 fw-bold">4.9 / 5.0</span>
+          </div>
+        </div>
+
+        <!-- Right: scroll carousel -->
+        <div class="col-md-8" data-fade data-delay="2">
+          <div class="testimonial-scroll no-scrollbar" id="testimonialScroll">
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle overflow-hidden" style="width:48px;height:48px;background:#cee9d6;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#4c6455;">林</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">林媽媽</p><p class="mb-0" style="font-size:.75rem;color:#424844;">三歲男孩家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「培兒蒂的建議非常簡單好懂，不像以往聽到的理論那麼沉重。自從調整了遊戲方式後，孩子的專注力明顯提升了，我們的關係也更親密。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle overflow-hidden" style="width:48px;height:48px;background:#D1E3E7;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#4c6455;">張</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">張先生</p><p class="mb-0" style="font-size:.75rem;color:#424844;">五歲雙胞胎父親</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「感統訓練不僅有趣，更讓我的孩子在學校適應得更好了。價格透明且專業度極高，非常推薦給正在煩惱的家長們。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;background:#cee9d6;color:#4c6455;flex-shrink:0;">邱</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">邱爸爸</p><p class="mb-0" style="font-size:.75rem;color:#424844;">兩歲男孩家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「本來很擔心孩子語言發展慢，老師透過遊戲引導，現在孩子變得很愛表達，跟我們的互動也多了許多笑聲。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;background:#ffdcbd;color:#725a41;flex-shrink:0;">王</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">王媽媽</p><p class="mb-0" style="font-size:.75rem;color:#424844;">小一新生家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「面對上學的適應障礙，老師給了我們很多具體的策略，現在孩子能準時進校門，情緒也穩定很多。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;background:#ffdad9;color:#785656;flex-shrink:0;">李</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">李小姐</p><p class="mb-0" style="font-size:.75rem;color:#424844;">五歲女孩家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「感統訓練讓孩子的大肌肉更有力量，平衡感變好後，他對戶外活動的自信心大增。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold text-white" style="width:48px;height:48px;background:#8FA998;flex-shrink:0;">林</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">林爸爸</p><p class="mb-0" style="font-size:.75rem;color:#424844;">家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「孩子以前很怕生，經過幾次遊戲活動後，現在去公園能主動跟小朋友打招呼了，看到他的自信真的很感動。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;background:#F5E1DA;color:#785656;flex-shrink:0;">陳</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">陳媽媽</p><p class="mb-0" style="font-size:.75rem;color:#424844;">家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「老師教的教養技巧非常實用，讓我們學會如何穩定孩子的情緒，家裡的氣氛變得和諧許多。」</p>
+              </div>
+            </div>
+
+            <div class="t-card">
+              <div class="glass-card border p-4 h-100" style="border-color:rgba(255,255,255,.5)!important;border-radius:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <div class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px;background:#D1E3E7;color:#4c6455;flex-shrink:0;">張</div>
+                  <div><p class="fw-bold mb-0" style="color:#1b1c1b;">張小姐</p><p class="mb-0" style="font-size:.75rem;color:#424844;">家長</p></div>
+                </div>
+                <p class="fst-italic" style="color:#424844;line-height:1.8;margin:0;">「原本擔心孩子專注力不夠，在感統訓練中他學會了耐心完成任務，現在上課也能坐得更久了。」</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- Carousel nav buttons -->
+          <div class="d-none d-md-flex gap-3 mt-4 justify-content-end">
+            <button class="btn rounded-circle d-flex align-items-center justify-content-center" style="width:48px;height:48px;border:2px solid #8FA998;color:#8FA998;" onclick="document.getElementById('testimonialScroll').scrollBy({left:-420,behavior:'smooth'})">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn rounded-circle d-flex align-items-center justify-content-center" style="width:48px;height:48px;border:2px solid #8FA998;color:#8FA998;" onclick="document.getElementById('testimonialScroll').scrollBy({left:420,behavior:'smooth'})">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding:0 0 7rem;" data-fade>
+    <div class="container" style="max-width:1200px;">
+      <div class="pei-cta-navy p-5 p-md-5 text-center" style="padding:4rem 5rem!important;">
+        <div class="deco-1"></div>
+        <div class="deco-2"></div>
+        <div class="position-relative" style="z-index:1;">
+          <h2 class="fw-bold mb-4" style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);color:#fff;">
+            準備好開啟一段<br>更輕鬆的育兒旅程了嗎？
+          </h2>
+          <p class="mx-auto mb-5" style="max-width:560px;font-size:1.125rem;color:rgba(255,255,255,.8);line-height:1.75;">
+            點擊下方按鈕，填寫初步諮詢表單，我們的專業職能治療師將在 24 小時內與您聯繫。
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-4">
+            <a href="contact.html" class="btn btn-lg fw-bold" style="background:#4c6455;color:#fff;border-radius:9999px;padding:.75rem 2.5rem;">預約免費諮詢</a>
+            <a href="contact.html" class="btn btn-lg fw-bold" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:9999px;padding:.75rem 2.5rem;backdrop-filter:blur(4px);">索取完整價目表</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<!-- FAB -->
+<a href="contact.html" class="pei-fab" aria-label="聯繫我們">
+  <span class="pei-fab-tip">有任何問題嗎？</span>
+  <i class="bi bi-chat-fill"></i>
+</a>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
