@@ -1267,6 +1267,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 767.98px) {
   :root { --navbar-height: 62px; }
+  .navbar-brand img { height: 40px !important; }
   .hero-section { min-height: auto; padding: 60px 0 50px; }
   .section    { padding: 54px 0; }
   .section-lg { padding: 70px 0; }

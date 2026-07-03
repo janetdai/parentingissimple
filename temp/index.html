@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="zh-Hant-TW"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>培兒蒂 Parenting is Simple - 陪您一起懂孩子</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#faf9f6",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-secondary-fixed": "#291805",
+                    "primary-fixed": "#cee9d6",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#785656",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffdad9",
+                    "on-primary-fixed-variant": "#344c3e",
+                    "on-secondary-fixed-variant": "#59422b",
+                    "calm-navy": "#2C3E50",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c2c8c2",
+                    "surface-dim": "#dbdad7",
+                    "surface": "#faf9f6",
+                    "on-secondary-container": "#796046",
+                    "on-primary-fixed": "#082014",
+                    "on-primary-container": "#273e31",
+                    "surface-container-lowest": "#ffffff",
+                    "soft-blush": "#F5E1DA",
+                    "surface-bright": "#faf9f6",
+                    "on-background": "#1b1c1b",
+                    "secondary-container": "#ffdcbd",
+                    "on-surface-variant": "#424844",
+                    "surface-container-low": "#f5f3f1",
+                    "primary-fixed-dim": "#b2cdbb",
+                    "tertiary-fixed-dim": "#e8bcbc",
+                    "secondary-fixed-dim": "#e1c1a2",
+                    "primary-container": "#8fa998",
+                    "primary": "#4c6455",
+                    "surface-tint": "#4c6455",
+                    "surface-container": "#efeeeb",
+                    "on-surface": "#1b1c1b",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e9e8e5",
+                    "outline": "#727973",
+                    "inverse-primary": "#b2cdbb",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#725a41",
+                    "inverse-surface": "#30312f",
+                    "inverse-on-surface": "#f2f1ee",
+                    "on-tertiary-container": "#4f3132",
+                    "on-tertiary-fixed": "#2d1415",
+                    "secondary-fixed": "#ffdcbd",
+                    "tertiary-container": "#c29999",
+                    "sage-green": "#8FA998",
+                    "warm-sand": "#F2E8DF",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5e3f3f",
+                    "sky-mist": "#D1E3E7",
+                    "surface-variant": "#e3e2e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1200px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans", "Noto Sans TC"],
+                    "label-md": ["Plus Jakarta Sans", "Noto Sans TC"],
+                    "headline-md": ["Plus Jakarta Sans", "Noto Sans TC"],
+                    "body-lg": ["Be Vietnam Pro", "Noto Sans TC"],
+                    "body-md": ["Be Vietnam Pro", "Noto Sans TC"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans", "Noto Sans TC"],
+                    "headline-xl": ["Plus Jakarta Sans", "Noto Sans TC"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blob-bg {
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .service-card:hover .service-icon {
+            transform: translateY(-8px) scale(1.05);
+        }
+        .dashed-path {
+            stroke-dasharray: 8 8;
+            animation: dash 30s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: -1000; }
+        }
+        body {
+            background-color: #faf9f6;
+            color: #1b1c1b;
+            font-family: 'Be Vietnam Pro', 'Noto Sans TC', sans-serif;
+            overflow-x: hidden;
+        }
+        .pill-button {
+            border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dot-pattern {
+            background-image: radial-gradient(currentColor 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .bg-gradient-soft { background: radial-gradient(circle at 50% 50%, var(--tw-bg-opacity, 1) 0%, rgba(250, 249, 246, 0.95) 100%); }
+        .accent-shape { pointer-events: none; position: absolute; z-index: 5; }
+        .floating-slow { animation: float-slow 8s ease-in-out infinite; }
+        @keyframes float-slow { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(15px, -15px) rotate(10deg); } }
+        .paper-layer { box-shadow: 20px 20px 60px #d9d8d6, -20px -20px 60px #ffffff; }
+    </style>
+</head>
+<body class="bg-gradient-soft">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary flex items-center">
+<img alt="培兒蒂 Logo" class="h-8 w-auto mr-3" src="https://placehold.co/600x500/cee9d6/4c6455?text=培兒蒂">
+                培兒蒂
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="#">專業首頁</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#qualifications">專業資歷</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">服務項目</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#articles">育兒文章</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">聯繫預約</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2">mail</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2">account_circle</button>
+<button class="pill-button bg-primary text-on-primary px-6 py-2.5 font-label-md hover:opacity-90 active:scale-95 duration-200">立即預約</button>
+</div>
+</div>
+</nav>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 pointer-events-none z-[-1]">
+<div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-sage-green/20 blob-bg"></div>
+<div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] rounded-full bg-warm-sand/40 blob-bg"></div>
+<div class="absolute bottom-[10%] left-[10%] w-[350px] h-[350px] rounded-full bg-sky-mist/30 blob-bg"></div>
+<svg class="absolute top-0 left-0 w-full h-full opacity-10" fill="none" viewBox="0 0 1200 3000">
+<path class="dashed-path" d="M100 200C300 400 900 100 1100 500C1300 900 100 1200 200 1600C300 2000 1000 1800 1100 2400" stroke="#4c6455" stroke-width="2"></path>
+</svg>
+</div>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center overflow-visible transition-all duration-1000 opacity-100 translate-y-0">
+<div class="order-2 md:order-1 relative z-10">
+<span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full text-label-md font-label-md mb-6">兒童職能治療師 簡肇宏</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-6 leading-tight">
+                    讓育兒變得簡單，<br><span class="text-primary">陪您溫柔讀懂</span>孩子的語言。
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    融合專業職能治療知識與家庭支持系統，我們不僅看見孩子的需要，更支持每一位在育兒路上努力的父母。
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="pill-button bg-primary text-on-primary px-10 py-4 font-headline-md shadow-lg shadow-primary/20 hover:-translate-y-1">立即預約</button>
+<button class="pill-button border-2 border-sage-green text-primary px-10 py-4 font-headline-md hover:bg-sage-green/5">了解服務</button>
+</div>
+</div>
+<div class="order-1 md:order-2 relative z-10">
+<div class="absolute -inset-4 bg-warm-sand/30 rounded-[40px] rotate-3 -z-10"></div>
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-sage-green/10 rounded-full blur-2xl floating-shape"></div>
+<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-warm-sand/20 rounded-full blur-2xl floating-shape" style="animation-delay: -2s"></div>
+<div class="aspect-[4/5] w-full max-h-[500px] rounded-[32px] overflow-hidden shadow-2xl relative z-20">
+<img alt="培兒蒂老師" class="w-full h-full object-cover object-top" src="https://placehold.co/600x500/cee9d6/4c6455?text=培兒蒂">
+</div>
+<!-- Floating badge -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl hidden md:block z-50">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">10+ 專業年資</div>
+<div class="text-body-md text-on-surface-variant">國家執照職能治療師</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="bg-warm-sand/10 py-section-gap overflow-hidden relative transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute right-0 top-0 w-1/3 h-full dot-pattern text-sage-green/10 -z-0"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -left-12 -top-12 w-64 h-64 bg-sky-mist/30 rounded-full -z-10 blur-2xl"></div>
+<img alt="家庭核心理念" class="w-full max-w-md mx-auto relative z-10" src="https://placehold.co/600x500/cee9d6/4c6455?text=培兒蒂">
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-soft-blush/20 blur-3xl rounded-full"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">以家庭為核心的成長引導</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            我們相信每個孩子都是獨特的，而父母是孩子最重要的成長夥伴。透過「家庭中心式服務」(Family-Centered Care)，我們協助家長建立遊戲力與觀察力，讓療育融入日常生活。
+                        </p>
+<ul class="flex flex-wrap gap-4 mt-8">
+<li class="flex items-center gap-3 bg-primary\/10 border border-primary\/10 px-6 py-4 rounded-2xl transition-all hover:bg-primary\/20">
+<span class="material-symbols-outlined text-primary">family_restroom</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">家庭諮詢服務</span>
+</li>
+<li class="flex items-center gap-3 bg-primary\/10 border border-primary\/10 px-6 py-4 rounded-2xl transition-all hover:bg-primary\/20">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+<span class="font-body-md text-body-md text-on-surface font-bold">生活策略引導</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<!-- Services Section -->
+<section class="py-section-gap bg-soft-blush/5 relative transition-all duration-1000 opacity-100 translate-y-0" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">我們能提供的支持</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        全方位的兒童成長諮詢，結合臨床經驗與生活美學，讓育兒不再是單打獨鬥。
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-sage-green/10 transition-all duration-500 shadow-sm">
+<div class="service-icon w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center text-primary mb-8 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-sage-green">mood</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">兒童遊戲發展</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">引導孩子在遊戲中學習，鍛鍊粗大與精細動作，激發潛能。</p>
+<a class="inline-flex items-center text-primary font-bold hover:underline" href="#">
+                            查看詳情 <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-sky-mist/10 transition-all duration-500 shadow-sm">
+<div class="service-icon w-16 h-16 bg-sky-mist/50 rounded-2xl flex items-center justify-center text-calm-navy mb-8 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">感統整合訓練</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">調節感官刺激，改善注意力與情緒控制能力，提升生活適應力。</p>
+<a class="inline-flex items-center text-primary font-bold hover:underline" href="#">
+                            查看詳情 <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-warm-sand/20 transition-all duration-500 shadow-sm">
+<div class="service-icon w-16 h-16 bg-warm-sand/50 rounded-2xl flex items-center justify-center text-secondary mb-8 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">育兒諮詢服務</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">針對家長的教養困擾提供專業分析，建立和諧的親子溝通模式。</p>
+<a class="inline-flex items-center text-primary font-bold hover:underline" href="#">
+                            查看詳情 <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-tertiary-fixed/20 transition-all duration-500 overflow-hidden relative shadow-sm">
+<div class="service-icon w-16 h-16 bg-tertiary-fixed/50 rounded-2xl flex items-center justify-center text-tertiary mb-8 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl">toys</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">嚴選教玩具</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">挑選符合發展階段的優質玩具，讓每一分投資都化作孩子的進步。</p>
+<div class="mt-4 rounded-xl overflow-hidden h-32 relative">
+<img alt="嚴選教玩具" class="w-full h-full object-cover" src="https://placehold.co/600x500/cee9d6/4c6455?text=培兒蒂">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Integration / Featured Guides -->
+<section class="bg-sky-mist/10 py-section-gap relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">育兒<span class="text-sage-green">即是</span>藝術</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">追蹤我們的社群，獲得每日育兒靈感與專業知識。</p>
+</div>
+<button class="pill-button bg-white text-primary px-8 py-3 font-label-md border border-primary/10 shadow-sm hover:shadow-md">查看全部文章</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<!-- Featured Article 1 -->
+<div class="group cursor-pointer relative">
+<div class="aspect-square rounded-[32px] overflow-hidden mb-4 relative shadow-lg">
+<img alt="如何提升孩子的專注力" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://placehold.co/600x500/cee9d6/4c6455?text=培兒蒂">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white font-bold">閱讀更多</span>
+</div>
+</div>
+<h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2">如何提升孩子的專注力？</h4>
+</div>
+<!-- Featured Article 2 -->
+<div class="group cursor-pointer relative">
+<div class="aspect-square rounded-[32px] overflow-hidden mb-4 bg-sage-green/20 flex items-center justify-center relative shadow-lg">
+<div class="text-primary text-center p-8">
+<span class="material-symbols-outlined text-6xl mb-4">menu_book</span>
+<div class="font-bold">感統遊戲 100 選</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white font-bold">閱讀更多</span>
+</div>
+</div>
+<h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2">感官統合與日常生活</h4>
+</div>
+<!-- Featured Article 3 -->
+<div class="group cursor-pointer hidden md:block relative">
+<div class="aspect-square rounded-[32px] overflow-hidden mb-4 bg-tertiary-fixed-dim/30 flex items-center justify-center relative shadow-lg">
+<div class="text-tertiary text-center p-8">
+<span class="material-symbols-outlined text-6xl mb-4">favorite</span>
+<div class="font-bold">溫柔堅定的教養</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-white font-bold">閱讀更多</span>
+</div>
+</div>
+<h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2">正向教養的實戰練習</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-section-gap relative transition-all duration-1000 opacity-100 translate-y-0" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-fixed rounded-[48px] p-8 md:p-24 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/30 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary-fixed mb-6">準備好開啟更輕鬆的育兒旅程了嗎？</h2>
+<p class="font-body-lg text-body-lg text-on-primary-fixed-variant mb-12 max-w-2xl mx-auto">加入我們的專業課程，或者預約諮詢。我們將陪伴您度過每一個育兒關鍵期。</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="pill-button bg-primary text-on-primary px-12 py-5 font-headline-md w-full md:w-auto shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 duration-200">立即線上預約</button>
+<div class="flex flex-wrap gap-4 justify-center">
+<a class="flex items-center gap-3 text-on-primary-fixed-variant bg-white/40 px-6 py-3 rounded-full backdrop-blur-sm hover:bg-white/60 transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+<span class="font-bold">IG: parentingissimple</span>
+</a>
+<a class="flex items-center gap-3 text-on-primary-fixed-variant bg-white/40 px-6 py-3 rounded-full backdrop-blur-sm hover:bg-white/60 transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-bold">FB Messenger: 培兒蒂</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high rounded-t-[40px] mt-24 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sage-green via-warm-sand to-tertiary-fixed opacity-50"></div>
+<div class="flex flex-col items-center justify-center w-full py-24 px-margin-mobile text-center max-w-container-max mx-auto relative z-10">
+<div class="text-headline-sm font-headline-sm font-bold text-primary mb-8">培兒蒂親子教育</div>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">專業資歷</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">服務項目</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">育兒文章</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">隱私政策</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">服務條款</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">常問問題</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">合作洽談</a>
+</div>
+<div class="flex gap-6 mb-12">
+<a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+</a>
+<a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">camera</span>
+</a>
+<a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface-variant opacity-60">
+                © 2024 培兒蒂 Occupational Therapy. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;&lt;html lang="zh-Hant-TW"&gt;&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="utf-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;培兒蒂 Parenting is Simple - 陪您一起懂孩子&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;amp;family=Be+Vietnam+Pro:wght@400;500&amp;amp;family=Noto+Sans+TC:wght@400;500;700&amp;amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script id="tailwind-config"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>tailwind.config = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>darkMode: "class",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>theme: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>extend: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"colors": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"background": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-container-highest": "#e3e2e0",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-secondary-fixed": "#291805",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"primary-fixed": "#cee9d6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-error-container": "#93000a",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"tertiary": "#785656",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"error": "#ba1a1a",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"tertiary-fixed": "#ffdad9",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-primary-fixed-variant": "#344c3e",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-secondary-fixed-variant": "#59422b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"calm-navy": "#2C3E50",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"error-container": "#ffdad6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"outline-variant": "#c2c8c2",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-dim": "#dbdad7",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-secondary-container": "#796046",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-primary-fixed": "#082014",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-primary-container": "#273e31",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-container-lowest": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"soft-blush": "#F5E1DA",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-bright": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-background": "#1b1c1b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"secondary-container": "#ffdcbd",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-surface-variant": "#424844",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-container-low": "#f5f3f1",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"primary-fixed-dim": "#b2cdbb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"tertiary-fixed-dim": "#e8bcbc",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"secondary-fixed-dim": "#e1c1a2",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"primary-container": "#8fa998",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"primary": "#4c6455",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-tint": "#4c6455",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-container": "#efeeeb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-surface": "#1b1c1b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-error": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-primary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-container-high": "#e9e8e5",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"outline": "#727973",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"inverse-primary": "#b2cdbb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-secondary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"secondary": "#725a41",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"inverse-surface": "#30312f",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"inverse-on-surface": "#f2f1ee",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-tertiary-container": "#4f3132",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-tertiary-fixed": "#2d1415",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"secondary-fixed": "#ffdcbd",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"tertiary-container": "#c29999",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"sage-green": "#8FA998",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"warm-sand": "#F2E8DF",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-tertiary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"on-tertiary-fixed-variant": "#5e3f3f",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"sky-mist": "#D1E3E7",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"surface-variant": "#e3e2e0"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"borderRadius": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"DEFAULT": "0.25rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"lg": "0.5rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"xl": "0.75rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"full": "9999px"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"spacing": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"margin-mobile": "20px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"gutter": "24px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"margin-desktop": "64px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"container-max": "1200px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"section-gap": "120px"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"fontFamily": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-lg": ["Plus Jakarta Sans", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"label-md": ["Plus Jakarta Sans", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-md": ["Plus Jakarta Sans", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"body-lg": ["Be Vietnam Pro", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"body-md": ["Be Vietnam Pro", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-xl-mobile": ["Plus Jakarta Sans", "Noto Sans TC"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-xl": ["Plus Jakarta Sans", "Noto Sans TC"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"fontSize": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.material-symbols-outlined {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.blob-bg {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>filter: blur(80px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: -1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.service-card:hover .service-icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-8px) scale(1.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.dashed-path {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>stroke-dasharray: 8 8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: dash 30s linear infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes dash {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>to { stroke-dashoffset: -1000; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #faf9f6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #1b1c1b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Be Vietnam Pro', 'Noto Sans TC', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.pill-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 9999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.glass-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.dot-pattern {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-image: radial-gradient(currentColor 1px, transparent 1px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-size: 16px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.floating-shape {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: float 6s ease-in-out infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes float {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0%, 100% { transform: translateY(0) rotate(0deg); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-20px) rotate(5deg); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.bg-gradient-soft { background: radial-gradient(circle at 50% 50%, var(--tw-bg-opacity, 1) 0%, rgba(250, 249, 246, 0.95) 100%); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.accent-shape { pointer-events: none; position: absolute; z-index: 5; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.floating-slow { animation: float-slow 8s ease-in-out infinite; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes float-slow { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(15px, -15px) rotate(10deg); } }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.paper-layer { box-shadow: 20px 20px 60px #d9d8d6, -20px -20px 60px #ffffff; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="bg-gradient-soft"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Top Navigation Bar --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-headline-md font-headline-md font-bold text-primary flex items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="培兒蒂 Logo" class="h-8 w-auto mr-3" src="https://lh3.googleusercontent.com/aida/AP1WRLtbaCdZxiAIol2eOl2N9nCgd4Gauf3uaQmtJEj7egolT1r_WzfDvwg21ZV8bYgzFRZ-uZWUjiut2P24Ed181ENTvgFtwWF9gwTmODnhqLf9J_HA4p18iaqCNcSd-8A5vb-P2vGVlntZsfZE7wnkS2LOX2-zzNjKXVVMwEoysYqAlQ2FMrhqgKYLCHgcT-5Mte9uKnITzva-gc-SqMp8QpLdQw_cVVI2Bu_L_U2IfqD3_D6trmHp4a5yeIER"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>培兒蒂</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="hidden md:flex gap-8 items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1 font-bold" href="#"&gt;專業首頁&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#qualifications"&gt;專業資歷&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services"&gt;服務項目&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#articles"&gt;育兒文章&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact"&gt;聯繫預約&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2"&gt;mail&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2"&gt;account_circle&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="pill-button bg-primary text-on-primary px-6 py-2.5 font-label-md hover:opacity-90 active:scale-95 duration-200"&gt;立即預約&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Background Decorative Elements --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="fixed inset-0 pointer-events-none z-[-1]"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-sage-green/20 blob-bg"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] rounded-full bg-warm-sand/40 blob-bg"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute bottom-[10%] left-[10%] w-[350px] h-[350px] rounded-full bg-sky-mist/30 blob-bg"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;svg class="absolute top-0 left-0 w-full h-full opacity-10" fill="none" viewBox="0 0 1200 3000"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;path class="dashed-path" d="M100 200C300 400 900 100 1100 500C1300 900 100 1200 200 1600C300 2000 1000 1800 1100 2400" stroke="#4c6455" stroke-width="2"&gt;&lt;/path&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;main class="pt-24"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Hero Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center overflow-visible transition-all duration-1000 opacity-100 translate-y-0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="order-2 md:order-1 relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="inline-block px-4 py-1.5 bg-primary-fixed text-on-primary-fixed rounded-full text-label-md font-label-md mb-6"&gt;兒童職能治療師 簡肇宏&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-6 leading-tight"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>讓育兒變得簡單，&lt;br&gt;&lt;span class="text-primary"&gt;陪您溫柔讀懂&lt;/span&gt;孩子的語言。</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>融合專業職能治療知識與家庭支持系統，我們不僅看見孩子的需要，更支持每一位在育兒路上努力的父母。</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-wrap gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="pill-button bg-primary text-on-primary px-10 py-4 font-headline-md shadow-lg shadow-primary/20 hover:-translate-y-1"&gt;立即預約&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="pill-button border-2 border-sage-green text-primary px-10 py-4 font-headline-md hover:bg-sage-green/5"&gt;了解服務&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="order-1 md:order-2 relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -inset-4 bg-warm-sand/30 rounded-[40px] rotate-3 -z-10"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -top-12 -left-12 w-48 h-48 bg-sage-green/10 rounded-full blur-2xl floating-shape"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -bottom-12 -right-12 w-48 h-48 bg-warm-sand/20 rounded-full blur-2xl floating-shape" style="animation-delay: -2s"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="aspect-[4/5] w-full max-h-[500px] rounded-[32px] overflow-hidden shadow-2xl relative z-20"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="培兒蒂老師" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AP1WRLsCjBrHV2Wz56nYoNQ1NrD8VsDk63u5zpFBb1m19tpeV8hzsgbeAAaeCvyF2R74Xi-wtZCr18Mj-6n25y-ZhkGCLtAMUR3_y5BfCspJXmL-cVMH7B9cMEnFTDDa_0cTugYo7hKakH8YKn7LQ-4pbYQAVKqIJ39XthcpmBbNQdZr6ShgqJ6x7aieHqMC0m5hTldLskubvu-Plr-51oyaGdUTZ6jmC_ecSoIopnmJfDQGTQVZzFPdg0MuVX4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Floating badge --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl hidden md:block z-50"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined"&gt;verified&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="font-bold text-on-surface"&gt;10+ 專業年資&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-body-md text-on-surface-variant"&gt;國家執照職能治療師&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Philosophy Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="bg-warm-sand/10 py-section-gap overflow-hidden relative transition-all duration-1000 opacity-100 translate-y-0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute right-0 top-0 w-1/3 h-full dot-pattern text-sage-green/10 -z-0"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="grid md:grid-cols-2 gap-16 items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -left-12 -top-12 w-64 h-64 bg-sky-mist/30 rounded-full -z-10 blur-2xl"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="家庭核心理念" class="w-full max-w-md mx-auto relative z-10" src="https://lh3.googleusercontent.com/aida/AP1WRLt_nTe3vTUpjgKuHTr1UJlXDlCGQ5UgAnPOuiVIxxuk_dP70OGoD4tYAyOiyYBZuPBFiufX5oTThHjx0Q-HLpKG8BGxSh-oR7E7C8KJHzX1sYnf6JQoQhXxEnjM_7E2J-JOEo4AxPG-8XuUBhlS2m644u8wuU6_sJdLrN2cQ_MMcaHgg3yjGH6At9ejDhpRzRGyZhTxAr2sXZ7km_5Dv-oZbjzaP8e1_e0hAmlG61oJkj_vbK9_z7UmVtB8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-soft-blush/20 blur-3xl rounded-full"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="font-headline-lg text-headline-lg text-on-surface mb-6"&gt;以家庭為核心的成長引導&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-lg text-body-lg text-on-surface-variant mb-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>我們相信每個孩子都是獨特的，而父母是孩子最重要的成長夥伴。透過「家庭中心式服務」(Family-Centered Care)，我們協助家長建立遊戲力與觀察力，讓療育融入日常生活。</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;ul class="flex flex-wrap gap-4 mt-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li class="flex items-center gap-3 bg-primary\/10 border border-primary\/10 px-6 py-4 rounded-2xl transition-all hover:bg-primary\/20"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-primary"&gt;family_restroom&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="font-body-md text-body-md text-on-surface font-bold"&gt;家庭諮詢服務&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li class="flex items-center gap-3 bg-primary\/10 border border-primary\/10 px-6 py-4 rounded-2xl transition-all hover:bg-primary\/20"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-primary"&gt;lightbulb&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="font-body-md text-body-md text-on-surface font-bold"&gt;生活策略引導&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Stats Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Services Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="py-section-gap bg-soft-blush/5 relative transition-all duration-1000 opacity-100 translate-y-0" id="services"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-center mb-16"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="font-headline-lg text-headline-lg text-on-surface mb-4"&gt;我們能提供的支持&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>全方位的兒童成長諮詢，結合臨床經驗與生活美學，讓育兒不再是單打獨鬥。</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 1 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-sage-green/10 transition-all duration-500 shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-icon w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center text-primary mb-8 transition-transform duration-300"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-4xl text-sage-green"&gt;mood&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="font-headline-md text-headline-md mb-4"&gt;兒童遊戲發展&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant mb-6"&gt;引導孩子在遊戲中學習，鍛鍊粗大與精細動作，激發潛能。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="inline-flex items-center text-primary font-bold hover:underline" href="#"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>查看詳情 &lt;span class="material-symbols-outlined ml-1"&gt;arrow_forward&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 2 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-sky-mist/10 transition-all duration-500 shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-icon w-16 h-16 bg-sky-mist/50 rounded-2xl flex items-center justify-center text-calm-navy mb-8 transition-transform duration-300"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-4xl"&gt;psychology&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="font-headline-md text-headline-md mb-4"&gt;感統整合訓練&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant mb-6"&gt;調節感官刺激，改善注意力與情緒控制能力，提升生活適應力。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="inline-flex items-center text-primary font-bold hover:underline" href="#"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>查看詳情 &lt;span class="material-symbols-outlined ml-1"&gt;arrow_forward&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 3 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-warm-sand/20 transition-all duration-500 shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-icon w-16 h-16 bg-warm-sand/50 rounded-2xl flex items-center justify-center text-secondary mb-8 transition-transform duration-300"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-4xl"&gt;groups&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="font-headline-md text-headline-md mb-4"&gt;育兒諮詢服務&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant mb-6"&gt;針對家長的教養困擾提供專業分析，建立和諧的親子溝通模式。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="inline-flex items-center text-primary font-bold hover:underline" href="#"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>查看詳情 &lt;span class="material-symbols-outlined ml-1"&gt;arrow_forward&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 4 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-card group bg-surface p-8 rounded-[32px] border border-surface-container-highest hover:bg-tertiary-fixed/20 transition-all duration-500 overflow-hidden relative shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="service-icon w-16 h-16 bg-tertiary-fixed/50 rounded-2xl flex items-center justify-center text-tertiary mb-8 transition-transform duration-300"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-4xl"&gt;toys&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="font-headline-md text-headline-md mb-4"&gt;嚴選教玩具&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant mb-6"&gt;挑選符合發展階段的優質玩具，讓每一分投資都化作孩子的進步。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="mt-4 rounded-xl overflow-hidden h-32 relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="嚴選教玩具" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsFAIcDT9gvwjuErpiTvxQ-k_fyvFDZh5nL-JBEPQ1wgjzRv89x6HVwk_mkYc-z0Z7X2ADUNZsZPYkKvjWJ_9dPXXQVLG3ugMGe5cOxZdmyFeNsXF4_KqvEXqkiVCKzvi435vz37hlfp-Yt4Al05UJ75dUJsvTuZw8uZfiKZKi2LeHqDDkdOGbMYOxoCiXG-vtiVwHZwNSBOV-0pvijuZU-3KjNCnj5wsNKvO-4L_EGpgaPK2sMqEKs3ZLX"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Instagram Integration / Featured Guides --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="bg-sky-mist/10 py-section-gap relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="font-headline-lg text-headline-lg text-on-surface mb-2"&gt;育兒&lt;span class="text-sage-green"&gt;即是&lt;/span&gt;藝術&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-md text-body-md text-on-surface-variant"&gt;追蹤我們的社群，獲得每日育兒靈感與專業知識。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="pill-button bg-white text-primary px-8 py-3 font-label-md border border-primary/10 shadow-sm hover:shadow-md"&gt;查看全部文章&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="grid grid-cols-2 md:grid-cols-3 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Featured Article 1 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="group cursor-pointer relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="aspect-square rounded-[32px] overflow-hidden mb-4 relative shadow-lg"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="如何提升孩子的專注力" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR-kLF7KVTAq8yvQt1QDmnTDG5nCieYPnCYCLKyegMItYv6sQXs9pSsdduU6xaXw2FX5w7roMF37kXdr-3Cxd6hDNhEWr-tzDmL7yLQpZB1q-_UnBJymM1gN2HJRVkNdC7x0bgKnSxKw_gIT51GcwyIkzxIntMzOcSisXWBf5ZxztZJJsNUs5EG4A28dkPN3VMskGl7J7zVJDIDxT9MUsA3S64zJktdiZ2Cg3VFcLmK7rZF9olkmaxstN7IxuHzHALj2htc1fJ7wZ9"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="text-white font-bold"&gt;閱讀更多&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2"&gt;如何提升孩子的專注力？&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Featured Article 2 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="group cursor-pointer relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="aspect-square rounded-[32px] overflow-hidden mb-4 bg-sage-green/20 flex items-center justify-center relative shadow-lg"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-primary text-center p-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-6xl mb-4"&gt;menu_book&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="font-bold"&gt;感統遊戲 100 選&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="text-white font-bold"&gt;閱讀更多&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2"&gt;感官統合與日常生活&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Featured Article 3 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="group cursor-pointer hidden md:block relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="aspect-square rounded-[32px] overflow-hidden mb-4 bg-tertiary-fixed-dim/30 flex items-center justify-center relative shadow-lg"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-tertiary text-center p-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-6xl mb-4"&gt;favorite&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="font-bold"&gt;溫柔堅定的教養&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="text-white font-bold"&gt;閱讀更多&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h4 class="font-headline-md text-on-surface text-lg md:text-xl px-2"&gt;正向教養的實戰練習&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Call to Action Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="py-section-gap relative transition-all duration-1000 opacity-100 translate-y-0" id="contact"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="bg-primary-fixed rounded-[48px] p-8 md:p-24 text-center relative overflow-hidden shadow-2xl"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute bottom-0 left-0 w-64 h-64 bg-white/30 rounded-full translate-y-1/2 -translate-x-1/2"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary-fixed mb-6"&gt;準備好開啟更輕鬆的育兒旅程了嗎？&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-body-lg text-body-lg text-on-primary-fixed-variant mb-12 max-w-2xl mx-auto"&gt;加入我們的專業課程，或者預約諮詢。我們將陪伴您度過每一個育兒關鍵期。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col md:flex-row gap-6 justify-center items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="pill-button bg-primary text-on-primary px-12 py-5 font-headline-md w-full md:w-auto shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 duration-200"&gt;立即線上預約&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-wrap gap-4 justify-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="flex items-center gap-3 text-on-primary-fixed-variant bg-white/40 px-6 py-3 rounded-full backdrop-blur-sm hover:bg-white/60 transition-colors" href="#"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined"&gt;photo_camera&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="font-bold"&gt;IG: parentingissimple&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="flex items-center gap-3 text-on-primary-fixed-variant bg-white/40 px-6 py-3 rounded-full backdrop-blur-sm hover:bg-white/60 transition-colors" href="#"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined"&gt;chat&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="font-bold"&gt;FB Messenger: 培兒蒂&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Footer --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;footer class="bg-surface-container dark:bg-surface-container-high rounded-t-[40px] mt-24 relative overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sage-green via-warm-sand to-tertiary-fixed opacity-50"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col items-center justify-center w-full py-24 px-margin-mobile text-center max-w-container-max mx-auto relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-headline-sm font-headline-sm font-bold text-primary mb-8"&gt;培兒蒂親子教育&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-wrap justify-center gap-8 mb-12"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;專業資歷&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;服務項目&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;育兒文章&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;隱私政策&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;服務條款&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;常問問題&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#"&gt;合作洽談&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex gap-6 mb-12"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;"&gt;social_leaderboard&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;"&gt;camera&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;"&gt;smart_display&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-body-md font-body-md text-on-surface-variant opacity-60"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>© 2024 培兒蒂 Occupational Therapy. All rights reserved.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const observerOptions = { threshold: 0.1 };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const observer = new IntersectionObserver((entries) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>entries.forEach(entry =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (entry.isIntersecting) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>entry.target.classList.add('opacity-100', 'translate-y-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>entry.target.classList.remove('opacity-0', 'translate-y-10');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, observerOptions);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('section').forEach(section =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>observer.observe(section);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>anchor.addEventListener('click', function (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const target = document.querySelector(this.getAttribute('href'));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (target) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>target.scrollIntoView({ behavior: 'smooth' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;&lt;/html&gt;</span></p>
+</body>
+</html>

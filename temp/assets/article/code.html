@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-surface-variant": "#424844",
+                "surface-bright": "#faf9f6",
+                "soft-blush": "#F5E1DA",
+                "secondary-container": "#ffdcbd",
+                "tertiary-container": "#c29999",
+                "surface-container-low": "#f5f3f1",
+                "surface-container": "#efeeeb",
+                "on-primary-fixed-variant": "#344c3e",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#c2c8c2",
+                "warm-sand": "#F2E8DF",
+                "secondary-fixed": "#ffdcbd",
+                "outline": "#727973",
+                "sage-green": "#8FA998",
+                "primary-fixed": "#cee9d6",
+                "on-tertiary-container": "#4f3132",
+                "calm-navy": "#2C3E50",
+                "surface-container-high": "#e9e8e5",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#f2f1ee",
+                "background": "#faf9f6",
+                "surface-tint": "#4c6455",
+                "tertiary": "#785656",
+                "surface-container-highest": "#e3e2e0",
+                "primary-fixed-dim": "#b2cdbb",
+                "inverse-surface": "#30312f",
+                "surface-dim": "#dbdad7",
+                "surface": "#faf9f6",
+                "on-secondary-fixed": "#291805",
+                "on-background": "#1b1c1b",
+                "secondary-fixed-dim": "#e1c1a2",
+                "primary-container": "#8fa998",
+                "on-secondary-container": "#796046",
+                "on-tertiary-fixed-variant": "#5e3f3f",
+                "sky-mist": "#D1E3E7",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#2d1415",
+                "primary": "#4c6455",
+                "surface-variant": "#e3e2e0",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary-fixed-variant": "#59422b",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#273e31",
+                "tertiary-fixed": "#ffdad9",
+                "inverse-primary": "#b2cdbb",
+                "on-surface": "#1b1c1b",
+                "tertiary-fixed-dim": "#e8bcbc",
+                "secondary": "#725a41",
+                "on-primary-fixed": "#082014",
+                "on-primary": "#ffffff",
+                "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "section-gap": "120px",
+                "container-max": "1200px",
+                "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                "headline-xl-mobile": ["Plus Jakarta Sans"],
+                "headline-xl": ["Plus Jakarta Sans"],
+                "label-md": ["Plus Jakarta Sans"],
+                "body-lg": ["Be Vietnam Pro"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "headline-lg": ["Plus Jakarta Sans"],
+                "body-md": ["Be Vietnam Pro"]
+              },
+              "fontSize": {
+                "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -12px rgba(76, 100, 85, 0.15);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .geometric-decor {
+            position: absolute;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.4;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8FA998;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">
+                培兒蒂
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">專業資歷</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">服務項目</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-label-md text-label-md" href="#">育兒文章</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">聯繫預約</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="hidden md:flex items-center space-x-4 mr-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">mail</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">account_circle</span>
+</div>
+<button class="bg-sage-green text-white px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">
+                    立即預約
+                </button>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center overflow-hidden">
+<div class="geometric-decor w-64 h-64 bg-sage-green rounded-full top-0 -left-20"></div>
+<div class="geometric-decor w-96 h-96 bg-sky-mist rounded-full bottom-0 -right-20"></div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-calm-navy mb-6">
+                育兒知識圖書館
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                陪你走過育兒的每一哩路，將專業臨床經驗轉化為溫潤的成長養分，與孩子一同綻放。
+            </p>
+<!-- Active Search & Tags -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-6 py-4 bg-sky-mist/30 border-none rounded-2xl focus:ring-2 focus:ring-sage-green/50 placeholder:text-outline-variant" placeholder="搜尋育兒心法或工作坊內容..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-6 py-4 bg-sage-green text-white rounded-2xl font-label-md flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[20px]">filter_list</span> 篩選工作坊</button>
+</div>
+</div>
+<!-- Categories Pills -->
+<div class="flex flex-wrap justify-center gap-3 mt-12">
+<button class="px-6 py-2 rounded-full bg-sage-green text-white font-label-md border-2 border-sage-green">全部心法 </button>
+<button class="px-6 py-2 rounded-full bg-transparent text-on-surface-variant font-label-md border-2 border-outline-variant hover:border-sage-green hover:text-sage-green transition-all">大腦工作坊</button>
+<button class="px-6 py-2 rounded-full bg-transparent text-on-surface-variant font-label-md border-2 border-outline-variant hover:border-sage-green hover:text-sage-green transition-all">繪本時間</button>
+<button class="px-6 py-2 rounded-full bg-transparent text-on-surface-variant font-label-md border-2 border-outline-variant hover:border-sage-green hover:text-sage-green transition-all">育兒教養</button>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Feature: 大腦課程 -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[32px] bg-sky-mist bento-item">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+<img class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene and modern learning environment with minimalist wooden toys and brain development diagrams on a soft background. The lighting is warm and natural, creating a professional yet nurturing clinical atmosphere for occupational therapy. Soft Sage Green and Sky Mist tones dominate the aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6hADUe10cpCF7ikN8xWdlpW4KaXHmvxFj9IS3J0TDyqUgUhm1GklBkukLWKtuZHWWnXNr6O1AGHzcSNOgkKT7073WzknJ-MOhXXWD9qT5W4HTb6Yh3P5coct1mkZkNhq_0Nzh-In1oRkOGXZJcdxr9O8pugKVO1fnbvM-nEaTt0AoJ4cBFn7M2vZeNlWlGHnrnBWN_lX-1GPmcYLBVNjZBga9eJz5KBYIOuI51qyR4DHYUaELBgJ6D97EdlWBTO0P9yKKHLvv5TNn"/>
+<div class="absolute bottom-0 left-0 p-8 z-20">
+<span class="px-4 py-1 bg-sage-green text-white text-label-md font-label-md rounded-full mb-4 inline-block">大腦工作坊</span>
+<h3 class="text-white font-headline-lg text-headline-lg mb-2">啟動感統大腦：0-3歲兒童神經發展實務</h3>
+<p class="text-white/80 font-body-md text-body-md line-clamp-2 max-w-lg">由資深職能治療師主講，帶領家長深入淺出理解孩子的大腦發展規律，透過實體工作坊優化感覺統合。</p>
+<div class="mt-6 flex items-center gap-4 text-white">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">calendar_today</span> 12月24日工作坊</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">group</span> 剩餘 3 個名額</div>
+</div>
+</div>
+</div>
+<!-- Small Feature: 繪本時間 -->
+<div class="md:col-span-4 bg-warm-sand p-8 rounded-[32px] flex flex-col justify-between bento-item relative overflow-hidden">
+<div class="absolute top-[-20%] right-[-10%] w-40 h-40 bg-soft-blush rounded-full opacity-50"></div>
+<div>
+<span class="px-4 py-1 bg-tertiary-container text-on-tertiary-container text-label-md font-label-md rounded-full mb-4 inline-block">繪本時間</span>
+<h3 class="text-calm-navy font-headline-md text-headline-md mb-4 leading-tight">睡前五分鐘：情緒繪本共讀指南</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">透過三本經典繪本，練習引導孩子說出心裡的委屈與快樂，建立深層安全感。</p>
+</div>
+<div class="mt-8">
+<img class="w-full h-40 object-cover rounded-2xl shadow-sm" data-alt="A cozy, sunlit reading nook for a child, featuring a soft pile of colorful children's picture books on a minimalist rug. The setting is warm and inviting with soft pastel colors, emphasizing a sense of calm and parental connection. The style is modern minimalist with tactile textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ND-HuugiS5Yd3kdmpC3j0bilcZPnvf8HTJDoXmHyCgCqMUwj_PFvEQrGmcFVOAdjq6JW_GAjg5kjd7zPWh6zUa4eZ3lFj3QkqXS4l9MamdVF83Cjjw8KzhsSfBZqbXztpihjQioQlSAqIzF2F0z89ItTShwI4HHnvXgEHKSkU7SvPmFi0YjIyDIBqz5aDybU6DrLMGKn_UWqZJ3KeWYces6uUGX2iRZjWwXYdFc01sIn91bc6uwd2nvdblQ44lXkPQgf4jgON2cJ"/>
+<button class="mt-6 text-primary font-bold flex items-center gap-2 group">
+                            閱讀專文 <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button><div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-label-md text-on-surface-variant/60"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">chat_bubble</span> 12 則留言</div><div class="flex gap-2"><span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-primary">share</span><span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-primary">favorite</span></div></div>
+</div>
+</div>
+<!-- Medium Feature: 育兒教養 -->
+<div class="md:col-span-5 bg-surface-container-high rounded-[32px] overflow-hidden bento-item flex flex-col">
+<div class="p-8 pb-0">
+<span class="px-4 py-1 bg-secondary-container text-on-secondary-container text-label-md font-label-md rounded-full mb-4 inline-block">育兒教養</span>
+<h3 class="text-calm-navy font-headline-md text-headline-md mb-4">當孩子鬧脾氣時，家長的「降溫」四步驟</h3>
+</div>
+<div class="mt-auto px-8 pb-8 flex-1">
+<div class="bg-surface rounded-2xl p-6 shadow-sm border border-outline-variant/30">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-sage-green/20 text-sage-green flex items-center justify-center font-bold text-xs">1</span>
+<span class="text-on-surface-variant text-body-md">深呼吸，覺察自己的情緒水位</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-sage-green/20 text-sage-green flex items-center justify-center font-bold text-xs">2</span>
+<span class="text-on-surface-variant text-body-md">同理回饋，描述孩子的生理不適</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="w-6 h-6 rounded-full bg-sage-green/20 text-sage-green flex items-center justify-center font-bold text-xs">3</span>
+<span class="text-on-surface-variant text-body-md">靜靜陪伴，不急著講大道理</span>
+</li>
+</ul>
+</div>
+<button class="w-full mt-6 py-3 border-2 border-sage-green text-sage-green rounded-xl font-bold hover:bg-sage-green hover:text-white transition-colors">下載情緒工作紙</button><div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-label-md text-on-surface-variant/60"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">forum</span> 社群討論</div><div class="flex gap-2"><span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-primary">bookmark</span><span class="material-symbols-outlined text-[16px] cursor-pointer hover:text-primary">ios_share</span></div></div>
+</div>
+</div>
+<!-- Large Content: 更多課程 -->
+<div class="md:col-span-7 bg-white border border-surface-container-highest rounded-[32px] p-8 bento-item">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline-md text-headline-md text-calm-navy">熱門學習專題</h3>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1" href="#">查看全部 <span class="material-symbols-outlined text-[16px]">open_in_new</span></a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex flex-col gap-3 group">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="An organized collection of colorful sensory therapy toys on a white minimalist shelf. The lighting is soft and airy, highlighting a modern and professional occupational therapy space. The color palette is composed of soft Sage Green and Sky Mist tones with plenty of white space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3o7EbUNZu2EM_oj5KFWl_BItAWucMZwrlEyJVV0mCQPjMhej8vDr4d35ePFk-LnQHxDo8BxaQgfnb2_AWVLN3z7KTYjafIY_DbwwDyLVamFW07VBuxJPJWLCHvYxSOrLm-8M88etk3GNmfVaIVPCr7oEKXkxj3QKNyWmvP0HDkbrWkR-nRgx99o_X56X5tbejjhT0Esczu_sOZlJx6FKTgcDpmNr9GfeGnHtRBLa2vsTDHYT05gqGsF5djPTkQJlxJm4tZRR4vUBG"/>
+</div>
+<span class="text-label-md text-sage-green">專注力專題</span>
+<h4 class="font-bold text-body-lg group-hover:text-primary transition-colors">如何透過「本體覺」遊戲提升專注？</h4>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close up of a child's hands playing with wooden blocks in a clean, minimalist setting. Warm natural sunlight filters through the scene, creating a sense of growth and nurturing. The overall style is intellectual yet approachable with soft warm sand tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY4NUE25nN-GeMAOs5d6bCJvhHXahe46K2PPF7q6gMOvMHYed9OAGhHIWqDYegjs2RuaRVWTv92Q2458vsm0TpGoKpDUJArDmnD0vAerga4axuTKIAfn8P4Mjdx3OdhIq02rBw4Hk3_7lnOAlRJq57eL1u8rc0cuASZYUZq73fPPyUKFhzNV4cDHdrhhkbWRGhCEGyUv6lmwNOpiuvjrxD0IT4RcCs_h7OVPZQ8KkFCWY5ehBHHHgWH78ltG9ZUoUzRUWYFVDkpl_f"/>
+</div>
+<span class="text-label-md text-tertiary">精細動作</span>
+<h4 class="font-bold text-body-lg group-hover:text-primary transition-colors">寫字之前的秘密：握筆力量的訓練</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="bg-sage-green py-section-gap mt-section-gap relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+<div class="absolute bottom-20 right-20 w-64 h-64 border-4 border-white rounded-[40px] rotate-45"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<span class="px-6 py-2 bg-white/20 text-white rounded-full text-label-md font-label-md mb-6 inline-block">知識每週送達</span>
+<h2 class="text-white font-headline-xl text-headline-xl mb-8">育兒知識週週送達</h2>
+<p class="text-white/90 text-body-lg max-w-xl mx-auto mb-10">每週一早上，我們將臨床發現的育兒心法與最新工作坊資訊，整理成三分鐘內能讀完的精華，直接送到你的信箱，陪你一起成長。</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 px-6 py-4 rounded-2xl border-none focus:ring-2 focus:ring-white/50 text-on-surface" placeholder="請輸入您的電子郵件" type="email"/>
+<button class="bg-calm-navy text-white px-8 py-4 rounded-2xl font-bold hover:bg-calm-navy/90 transition-all">訂閱</button>
+</form>
+</div>
+</section><section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative overflow-hidden"><div class="geometric-decor w-64 h-64 bg-soft-blush rounded-full -bottom-20 -left-20 opacity-20"></div><div class="text-center mb-16"><h2 class="text-headline-lg font-headline-lg text-calm-navy">最新育兒專文</h2><div class="w-16 h-1 bg-sage-green mx-auto mt-4 rounded-full"></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"><div class="bg-white rounded-[32px] overflow-hidden border border-surface-container-highest group hover:shadow-lg transition-all"><div class="aspect-video overflow-hidden"><img alt="大腦開發" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3o7EbUNZu2EM_oj5KFWl_BItAWucMZwrlEyJVV0mCQPjMhej8vDr4d35ePFk-LnQHxDo8BxaQgfnb2_AWVLN3z7KTYjafIY_DbwwDyLVamFW07VBuxJPJWLCHvYxSOrLm-8M88etk3GNmfVaIVPCr7oEKXkxj3QKNyWmvP0HDkbrWkR-nRgx99o_X56X5tbejjhT0Esczu_sOZlJx6FKTgcDpmNr9GfeGnHtRBLa2vsTDHYT05gqGsF5djPTkQJlxJm4tZRR4vUBG"/></div><div class="p-6"><span class="px-3 py-1 bg-sage-green/10 text-sage-green text-label-md font-label-md rounded-full mb-3 inline-block">大腦開發</span><h4 class="font-bold text-body-lg text-on-surface mb-2 group-hover:text-primary transition-colors">如何透過日常遊戲刺激幼兒前庭覺發展？</h4><p class="text-on-surface-variant text-body-md line-clamp-2">前庭覺是平衡感的基礎，透過簡單的搖晃與旋轉遊戲，能有效提升孩子的專注力...</p></div></div><div class="bg-white rounded-[32px] overflow-hidden border border-surface-container-highest group hover:shadow-lg transition-all"><div class="aspect-video overflow-hidden"><img alt="情緒調節" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ND-HuugiS5Yd3kdmpC3j0bilcZPnvf8HTJDoXmHyCgCqMUwj_PFvEQrGmcFVOAdjq6JW_GAjg5kjd7zPWh6zUa4eZ3lFj3QkqXS4l9MamdVF83Cjjw8KzhsSfBZqbXztpihjQioQlSAqIzF2F0z89ItTShwI4HHnvXgEHKSkU7SvPmFi0YjIyDIBqz5aDybU6DrLMGKn_UWqZJ3KeWYces6uUGX2iRZjWwXYdFc01sIn91bc6uwd2nvdblQ44lXkPQgf4jgON2cJ"/></div><div class="p-6"><span class="px-3 py-1 bg-tertiary-container/20 text-tertiary text-label-md font-label-md rounded-full mb-3 inline-block">情緒調節</span><h4 class="font-bold text-body-lg text-on-surface mb-2 group-hover:text-primary transition-colors">當孩子說「我不行」：建立成長型思維的對話術</h4><p class="text-on-surface-variant text-body-md line-clamp-2">面對挫折時的退縮是正常的，家長可以透過具體的鼓勵，引導孩子看見努力的價值...</p></div></div><div class="bg-white rounded-[32px] overflow-hidden border border-surface-container-highest group hover:shadow-lg transition-all"><div class="aspect-video overflow-hidden"><img alt="生活自理" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY4NUE25nN-GeMAOs5d6bCJvhHXahe46K2PPF7q6gMOvMHYed9OAGhHIWqDYegjs2RuaRVWTv92Q2458vsm0TpGoKpDUJArDmnD0vAerga4axuTKIAfn8P4Mjdx3OdhIq02rBw4Hk3_7lnOAlRJq57eL1u8rc0cuASZYUZq73fPPyUKFhzNV4cDHdrhhkbWRGhCEGyUv6lmwNOpiuvjrxD0IT4RcCs_h7OVPZQ8KkFCWY5ehBHHHgWH78ltG9ZUoUzRUWYFVDkpl_f"/></div><div class="p-6"><span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-label-md font-label-md rounded-full mb-3 inline-block">生活自理</span><h4 class="font-bold text-body-lg text-on-surface mb-2 group-hover:text-primary transition-colors">從握湯匙到扣鈕扣：精細動作發展里程碑</h4><p class="text-on-surface-variant text-body-md line-clamp-2">生活自理能力的培養不只是為了方便，更是孩子建立自信心與獨立性的重要過程...</p></div></div></div><div class="text-center"><button class="px-10 py-4 border-2 border-sage-green text-sage-green rounded-full font-bold hover:bg-sage-green hover:text-white transition-all active:scale-95">查看更多文章</button></div></section>
+<!-- FAQ Section for Courses -->
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high full-width rounded-t-xl">
+<div class="flex flex-col items-center justify-center w-full py-section-gap px-margin-mobile text-center">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface mb-8">
+                培兒蒂親子教育</div>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface transition-all" href="#">隱私政策</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface transition-all" href="#">服務條款</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface transition-all" href="#">常見問題</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-on-surface transition-all" href="#">合作洽談</a>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant">
+                © 2024 培兒蒂 Occupational Therapy. All rights reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.bento-item').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for more complex animations if needed
+            });
+        });
+
+        // Sticky header background shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

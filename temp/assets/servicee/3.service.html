@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;html lang="zh-TW" style=""&gt;&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="utf-8"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;amp;display=swap" rel="stylesheet"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.material-symbols-outlined {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.glass-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(12px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(12px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.organic-shape-1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.organic-shape-2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script id="tailwind-config"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tailwind.config = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>darkMode: "class",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>theme: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>extend: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"colors": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"background": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-container-highest": "#e3e2e0",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-secondary-fixed": "#291805",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"primary-fixed": "#cee9d6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-error-container": "#93000a",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"tertiary": "#785656",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"error": "#ba1a1a",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"tertiary-fixed": "#ffdad9",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-primary-fixed-variant": "#344c3e",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-secondary-fixed-variant": "#59422b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"calm-navy": "#2C3E50",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"error-container": "#ffdad6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"outline-variant": "#c2c8c2",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-dim": "#dbdad7",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-secondary-container": "#796046",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-primary-fixed": "#082014",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-primary-container": "#273e31",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-container-lowest": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"soft-blush": "#F5E1DA",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-bright": "#faf9f6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-background": "#1b1c1b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"secondary-container": "#ffdcbd",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-surface-variant": "#424844",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-container-low": "#f5f3f1",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"primary-fixed-dim": "#b2cdbb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"tertiary-fixed-dim": "#e8bcbc",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"secondary-fixed-dim": "#e1c1a2",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"primary-container": "#8fa998",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"primary": "#4c6455",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-tint": "#4c6455",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-container": "#efeeeb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-surface": "#1b1c1b",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-error": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-primary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-container-high": "#e9e8e5",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"outline": "#727973",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"inverse-primary": "#b2cdbb",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-secondary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"secondary": "#725a41",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"inverse-surface": "#30312f",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"inverse-on-surface": "#f2f1ee",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-tertiary-container": "#4f3132",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-tertiary-fixed": "#2d1415",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"secondary-fixed": "#ffdcbd",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"tertiary-container": "#c29999",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"sage-green": "#8FA998",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"warm-sand": "#F2E8DF",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-tertiary": "#ffffff",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"on-tertiary-fixed-variant": "#5e3f3f",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"sky-mist": "#D1E3E7",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"surface-variant": "#e3e2e0"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"borderRadius": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"DEFAULT": "0.25rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"lg": "0.5rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"xl": "0.75rem",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"full": "9999px"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"spacing": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"margin-mobile": "20px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"gutter": "24px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"margin-desktop": "64px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"container-max": "1200px",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"section-gap": "120px"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"fontFamily": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-lg": ["Plus Jakarta Sans"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"label-md": ["Plus Jakarta Sans"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-md": ["Plus Jakarta Sans"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"body-lg": ["Be Vietnam Pro"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"body-md": ["Be Vietnam Pro"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-xl-mobile": ["Plus Jakarta Sans"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-xl": ["Plus Jakarta Sans"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>"fontSize": {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>"headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="bg-background text-on-background font-body-md"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Top Navigation --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;nav class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-headline-md font-headline-md font-bold text-primary"&gt;培兒蒂&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Desktop Nav --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="hidden md:flex items-center space-x-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#"&gt;專業資歷&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-primary border-b-2 border-primary pb-1 font-bold font-label-md text-label-md" href="#"&gt;服務項目&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#"&gt;育兒文章 &lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#"&gt;聯繫預約&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center space-x-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="material-symbols-outlined text-on-surface-variant hover:bg-primary/5 p-2 rounded-full transition-colors"&gt;mail&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="material-symbols-outlined text-on-surface-variant hover:bg-primary/5 p-2 rounded-full transition-colors"&gt;account_circle&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:shadow-lg transition-all active:scale-95 duration-200"&gt;立即預約&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<p class="p1"><span class="s1">&lt;main class="pt-24"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Hero Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-24 relative overflow-hidden"&gt;&lt;div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden"&gt;&lt;div class="absolute top-10 left-10 w-32 h-32 border-2 border-sage-green/20 rounded-full"&gt;&lt;/div&gt;&lt;div class="absolute bottom-20 right-10 w-64 h-64 bg-warm-sand/10 organic-shape-2"&gt;&lt;/div&gt;&lt;div class="absolute top-1/4 right-1/4 grid grid-cols-4 gap-2 opacity-20"&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;div class="w-2 h-2 rounded-full bg-sage-green"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="grid md:grid-cols-2 gap-12 items-center relative z-10"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="space-y-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1.5 rounded-full text-label-md font-label-md"&gt;我們的專業服務&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-calm-navy"&gt;為孩子量身打造的&lt;br/&gt;&lt;span class="text-primary"&gt;成長應援計畫&lt;/span&gt;&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-lg font-body-lg text-on-surface-variant max-w-md"&gt;我們致力於用最溫柔的方式，陪伴家長解決育兒難題，讓職能治療融入日常生活，使「教養」變得簡單而純粹。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 bg-soft-blush/30 organic-shape-1 animate-pulse" style="transform: translate(11.5312px, 0.0176782px);"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="Therapy Session" class="rounded-[40px] shadow-2xl w-full object-cover aspect-[4/3]" data-alt="A warm, brightly lit interior of a children's developmental therapy room with natural wood elements and soft pastel colors. A therapist is sitting on a comfortable rug, gently interacting with a toddler using colorful sensory toys. The lighting is soft and golden, creating a peaceful, nurturing environment consistent with a high-end minimalist design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeDiGKgop1Jmn-nXFA_EthXy-gLN9FmMe1DJMS27o7fC_DGVeOeM7tb3Tp0fcoylIM6w29_TOKIBMzPHFGPhvaB_GUlN-9pc5e8GnJnzTGn1L2OLA9z1OvBM49gIRUwuUSPpQgfESkBBOx0yoHimc64UNqkuqLfK0e66coaRqNN2S_JavoQFN4IweLdZcsYp5cOPOoAXYAZn_3ZnhUVwnG5WIT23mlOFQDqqfWQX8zx-wkAztUVO-K5hBC9j4RZuw8LIRLUKyuRjLA"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Services Bento Grid --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-24 bg-surface-container-low rounded-[48px] mb-24"&gt;&lt;div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden"&gt;&lt;div class="absolute -top-20 -left-20 w-80 h-80 bg-sky-mist/30 rounded-full blur-3xl"&gt;&lt;/div&gt;&lt;div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-warm-sand/20 to-transparent"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-center mb-16 space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="text-headline-lg font-headline-lg text-calm-navy"&gt;全方位服務項目&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;我們提供以下四種核心服務，針對不同階段的發展需求提供支援。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="grid grid-cols-1 md:grid-cols-12 gap-gutter"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 1: Children's Game Activities --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:col-span-7 group relative overflow-hidden bg-white rounded-[32px] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col md:flex-row gap-8 items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex-1 space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 bg-sky-mist rounded-2xl flex items-center justify-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-primary text-2xl"&gt;child_care&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="text-headline-md font-headline-md text-on-surface"&gt;兒童遊戲活動&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;透過分齡設計的趣味活動，在遊戲中激發孩子的專注力與粗細動作發展。我們強調「玩」就是學習的最好方式。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;ul class="space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li class="flex items-center gap-2 text-label-md font-label-md text-primary"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-[18px]"&gt;check_circle&lt;/span&gt; 發展里程碑評估</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li class="flex items-center gap-2 text-label-md font-label-md text-primary"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-[18px]"&gt;check_circle&lt;/span&gt; 分齡小組互動課程</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="mt-4 px-6 py-2 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all font-label-md text-label-md"&gt;諮詢報名&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-full md:w-2/5 aspect-square bg-warm-sand rounded-[24px] overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="Children's Activity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A close-up shot of a child's hands playing with high-quality wooden blocks in soft pastel colors. The background is a clean, bright, and airy room with a sage green and warm sand color palette. The lighting is soft and natural, emphasizing a calm and focused play atmosphere typical of a professional therapy session." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmK6f_xd9izKjL4Eovg78_3zJ9Gaw9YkyplzimdiBRejmnCVK5yxefsqpryZO6DUrXAk3zBbkaLsOokjM9H4c9k4XKPlliTY47_qgZQ-O6kTJug0UHfqBjZWvre4LT0wCck-QZHxvwWyWcM2gEekDt6lEkwUBf5enZgOOmgnwPlo5yAkmFfgUQLT55mSVMryo-ZWm3njMO3L43sx6Fbk7RfXG0rFFvT_rV-yX9Vg3yWyHaikGRJl2wF0uJ2na0jKMyEDqPrYQtmeQ7"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 2: Sensory Integration --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:col-span-5 group relative overflow-hidden bg-sage-green text-white rounded-[32px] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="space-y-4 h-full flex flex-col justify-between"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-white text-2xl"&gt;bubble_chart&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="text-headline-md font-headline-md"&gt;感覺統合與處理&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-white/90"&gt;針對觸覺敏感、平衡失調等感覺處理問題，提供個人化的感覺餐建議與環境調整策略。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="pt-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="bg-white/10 p-4 rounded-2xl mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-label-md font-label-md mb-2"&gt;包含項目：&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-sm"&gt;感覺發展量表評估、感覺統合遊戲活動、居家環境建置建議&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="w-full bg-white text-primary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-warm-sand transition-all"&gt;獲取資訊 &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 3: Parenting Consultation --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:col-span-5 group relative overflow-hidden bg-soft-blush rounded-[32px] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 bg-white/50 rounded-2xl flex items-center justify-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-tertiary text-2xl"&gt;forum&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="text-headline-md font-headline-md text-on-surface"&gt;教養諮詢&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;我們聽懂孩子的「話」，更聽懂家長的「心」。提供專業的情緒調節建議與親子溝通技巧。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex -space-x-2 pt-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200"&gt;&lt;img alt="avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDY-NnrJMEH8zJQNPVbfRmcHJ398DpLkaN5l_Fw_P63WHtCQYN7D_rR06B3oKTl75K1SpeYRZm12mc6GS0ZLRedAEmzno6hgSmdjN66THjYu2ZwJ6I-2psanH1ex24ZbDlPyZ4DYXotLkBROLRdgEM4GHDmA_g_D6f6rEegVAOEio1xUsyLtJwVHQ61QHX_23752KFcxFHKqcdnOZ1_VmMdiaIzt8gDhp5vpy13cpq-u_K11_jRzWHTYntNWi4QHkfgvzVyEAeanv"/&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200"&gt;&lt;img alt="avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA07aSNpYhlxrYZSqkbqgIJtPq3UI0NNyGgBUtXVE667UtpwHB-zF5HI8-r-2a4Zy20NK9E3RiHwc2a1kZyY4OuLRfokWnfP5-9XxXX3Bn3QPBIHEd4fMtKktwvDHB-f7dB20BPZbEYk47QXTa-1R2Uvb-g5f1pAm33XYN91H0IOL658vv-NHYEJENyeaMYbkPyARVGs52yOaLGVcf62pV5WUxgauIrPG7C2oNP8c8WyTFH-5pTE0pm7rq_de1vnrn2NKWLGtY8zgW"/&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-white text-[10px] font-bold text-primary"&gt;+50&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant/70"&gt;已有超過 200 位家長獲得有效的行為改善策略&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="mt-4 w-full bg-calm-navy text-white px-6 py-3 rounded-full font-label-md text-label-md hover:bg-calm-navy/90 transition-all"&gt;育兒諮詢 &lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Service 4: Toy Sales &amp; Advice --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:col-span-7 group relative overflow-hidden bg-white rounded-[32px] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col md:flex-row gap-8 items-center h-full"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-full md:w-1/2 bg-surface-container-high rounded-[24px] p-6 flex items-center justify-center relative"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute inset-0 bg-gradient-to-tr from-sky-mist/20 to-transparent"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="Toy Sales" class="rounded-xl shadow-md z-10 w-full h-48 object-cover" data-alt="A curated selection of minimalist, sustainable wooden toys arranged aesthetically on a shelf. The toys have soft, muted colors like sage green and warm sand. The environment is clean and professional, using soft focus for the background to make the textures and forms of the educational toys stand out in high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxoVXWC782RD8dezSgqnZ0f-DYtJYn6iUY_Iuevez5ICNhQZ1p72OtGAxG3io-zR36zD23cVjobXTl1wbCMO__-HxQux8UvsVtIcjEf-O5UHlNcTUDpGzzJMIUpOw9CPw1mjWc9OY8P9p8ds4aNeRvGZaLeL7rNwc9AmkjmCALDrYFAeUqqOdIkVbEQDrzbOYeYzB_0kEx6qp01XxrFTtPwmoEHFaE8QdDphIvLIWqKMuSiMvkEdpeW8JstMbEROCEBwizn_gsfV4S"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex-1 space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 bg-secondary-container rounded-2xl flex items-center justify-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary text-2xl"&gt;shopping_bag&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3 class="text-headline-md font-headline-md text-on-surface"&gt;玩具銷售與教具建議&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;拒絕過度購買，只挑選真正對孩子發展有益的高品質教具。我們為您提供量身定制的玩具組合清單。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 pt-2"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="text-primary font-bold text-headline-md"&gt;NT$ 500 &lt;span class="text-sm font-normal text-on-surface-variant"&gt;起&lt;/span&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-primary font-label-md text-label-md underline underline-offset-4" href="#"&gt;查看商店&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonials --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-24"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col md:flex-row gap-12 items-center"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:w-1/3 space-y-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="text-headline-lg font-headline-lg text-calm-navy leading-tight"&gt;看見孩子的&lt;br/&gt;一點點改變&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;來自家長們的最真實回饋，見證了培兒蒂所提倡的「簡單即是美」的育兒力量。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex gap-2"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;"&gt;star&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;"&gt;star&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;"&gt;star&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;"&gt;star&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;"&gt;star&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="ml-2 font-bold"&gt;4.9 / 5.0&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="md:w-2/3 relative group"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar scroll-smooth" id="testimonial-carousel"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonial 1 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="Parent" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA48ownwPdI1ZtCjK5ns5-ZcvzuT1sTAtY3UeUVrB9wgMWYxrrXqBQW-Bs6HMvAX11mk-GyNnDnZQ6rPNweLq5uDAtlzMKBdewEmF7D4i-qeCDynNlz14TsRTUPvTS58EZ1YiO6uZDxkfCSy_mBUXP4qMGL1_bUOOu9xEc5d9It_nMzrkXZOFe3qdBG_OLp5rFMCHeNEKvzTJ55XMFm9OxA3kSNQpcaOSqggzGtPn1W0qIMs2prN7jnQX6dCUZP_ZjwNYaLb2LjJVsW"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-bold text-on-surface"&gt;林媽媽&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant"&gt;三歲男孩家長&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「培兒蒂的建議非常簡單好懂，不像以往聽到的理論那麼沉重。自從調整了遊戲方式後，孩子的專注力明顯提升了，我們的關係也更親密。」&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonial 2 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;img alt="Parent" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZloE59yHDFmUD-pt5bxtdB6k4BdG_fmit0E8O5fdJkkoqt6uPkZ0R1rhuN78hEwaHw51CvY1K2yyvOSqX3kvkRAki-mPyAYlxseZvyN2GWoN8n0g9fvqGnEAyyYg1Fi20xipxYr7pxfGQ9mcJ1hhHukvRhp2rm6EWM2wLl7-LarpX0tTxFA8GVuaEhVF8JTWCA_2VTMVsOfV-ZiOrwbUKz5BjBHApgnKEfey__n0eVUyumkrebgWTeGC4hcyVatbLGIgKckgT5-HB"/&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-bold text-on-surface"&gt;張先生&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant"&gt;五歲雙胞胎父親&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「感統訓練不僅有趣，更讓我的孩子在學校適應得更好了。價格透明且專業度極高，非常推薦給正在煩惱的家長們。」&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonial 3 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold"&gt;邱&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-bold text-on-surface"&gt;邱爸爸&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant"&gt;兩歲男孩家長&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「本來很擔心孩子語言發展慢，老師透過遊戲引導，現在孩子變得很愛表達，跟我們的互動也多了許多笑聲。」&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonial 4 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold"&gt;王&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-bold text-on-surface"&gt;王媽媽&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant"&gt;小一新生家長&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「面對上學的適應障礙，老師給了我們很多具體的策略，現在孩子能準時進校門，情緒也穩定很多。」&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Testimonial 5 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex items-center gap-4 mb-6"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold"&gt;李&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="font-bold text-on-surface"&gt;李小姐&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-xs text-on-surface-variant"&gt;五歲女孩家長&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「感統訓練讓孩子的大肌肉更有力量，平衡感變好後，他對戶外活動的自信心大增。」&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;&lt;div class="flex items-center gap-4 mb-6"&gt;&lt;div class="w-12 h-12 rounded-full bg-sage-green flex items-center justify-center text-white font-bold"&gt;林&lt;/div&gt;&lt;div&gt;&lt;p class="font-bold text-on-surface"&gt;林爸爸&lt;/p&gt;&lt;p class="text-xs text-on-surface-variant"&gt;家長&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「孩子以前很怕生，經過幾次遊戲活動後，現在去公園能主動跟小朋友打招呼了，看到他的自信真的很感動。」&lt;/p&gt;&lt;/div&gt;&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;&lt;div class="flex items-center gap-4 mb-6"&gt;&lt;div class="w-12 h-12 rounded-full bg-soft-blush flex items-center justify-center text-tertiary font-bold"&gt;陳&lt;/div&gt;&lt;div&gt;&lt;p class="font-bold text-on-surface"&gt;陳媽媽&lt;/p&gt;&lt;p class="text-xs text-on-surface-variant"&gt;家長&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「剪刀老師教的教養技巧非常實用，讓我們學會如何穩定孩子的情緒，家裡的氣氛變得和諧許多。」&lt;/p&gt;&lt;/div&gt;&lt;div class="min-w-[320px] md:min-w-[400px] snap-center glass-card border border-white/50 p-8 rounded-[32px] shadow-sm"&gt;&lt;div class="flex items-center gap-4 mb-6"&gt;&lt;div class="w-12 h-12 rounded-full bg-sky-mist flex items-center justify-center text-primary font-bold"&gt;張&lt;/div&gt;&lt;div&gt;&lt;p class="font-bold text-on-surface"&gt;張小姐&lt;/p&gt;&lt;p class="text-xs text-on-surface-variant"&gt;家長&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class="text-body-md font-body-md italic text-on-surface-variant"&gt;「原本擔心孩子專注力不夠，在感統訓練中他學會了耐心完成任務，現在上課也能坐得更久了。」&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Navigation Buttons --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="hidden md:flex absolute -bottom-4 right-0 gap-4 bg-background/80"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="w-12 h-12 rounded-full border-2 border-sage-green text-sage-green flex items-center justify-center hover:bg-sage-green hover:text-white transition-all" onclick="document.getElementById('testimonial-carousel').scrollBy({left: -400, behavior: 'smooth'})"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined"&gt;chevron_left&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="w-12 h-12 rounded-full border-2 border-sage-green text-sage-green flex items-center justify-center hover:bg-sage-green hover:text-white transition-all" onclick="document.getElementById('testimonial-carousel').scrollBy({left: 400, behavior: 'smooth'})"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined"&gt;chevron_right&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- CTA Section --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-24"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="bg-calm-navy rounded-[40px] p-8 md:p-16 text-center text-white relative overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -top-12 -right-12 w-48 h-48 bg-white/5 organic-shape-1" style="transform: translate(11.5312px, 0.0176782px);"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="absolute -bottom-12 -left-12 w-64 h-64 bg-white/5 organic-shape-2" style="transform: translate(11.5312px, 0.0176782px);"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="relative z-10 space-y-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 class="text-headline-lg md:text-headline-xl font-headline-xl"&gt;準備好開啟一段&lt;br/&gt;更輕鬆的育兒旅程了嗎？&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-lg font-body-lg text-white/80 max-w-2xl mx-auto"&gt;點擊下方按鈕，填寫初步諮詢表單，我們的專業職能治療師將在 24 小時內與您聯繫。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col sm:flex-row justify-center gap-4"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="bg-primary text-white px-10 py-4 rounded-full font-label-md text-label-md hover:shadow-xl transition-all hover:scale-105 active:scale-95"&gt;預約免費諮詢&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-full font-label-md text-label-md hover:bg-white hover:text-calm-navy transition-all"&gt;索取完整價目表&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Footer --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;footer class="bg-surface-container dark:bg-surface-container-high full-width rounded-t-xl"&gt;&lt;div class="w-full h-8 bg-gradient-to-b from-background to-transparent opacity-50"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-col items-center justify-center w-full py-section-gap px-margin-mobile text-center max-w-container-max mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="text-headline-sm font-headline-sm font-bold text-on-surface mb-8"&gt;培兒蒂親子教育&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex flex-wrap justify-center gap-8 mb-12"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md" href="#"&gt;隱私政策&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md" href="#"&gt;服務條款&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md" href="#"&gt;常見問題&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="text-on-surface-variant hover:text-on-surface transition-all duration-300 font-label-md text-label-md" href="#"&gt;合作洽談&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="flex gap-6 mb-12"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"&gt;&lt;span class="material-symbols-outlined text-xl"&gt;share&lt;/span&gt;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"&gt;&lt;span class="material-symbols-outlined text-xl"&gt;camera&lt;/span&gt;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"&gt;&lt;span class="material-symbols-outlined text-xl"&gt;call&lt;/span&gt;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p class="text-body-md font-body-md text-on-surface-variant"&gt;© 2024 培兒蒂 Occupational Therapy. All rights reserved.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1">&lt;!-- Floating Action Button (FAB) --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="material-symbols-outlined text-2xl"&gt;chat_bubble&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;span class="absolute right-20 bg-white text-primary px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap font-label-md text-label-md"&gt;有任何問題嗎？&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Simple scroll interaction for Header</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.addEventListener('scroll', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const nav = document.querySelector('nav');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (window.scrollY &gt; 50) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>nav.classList.add('py-2');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>nav.classList.remove('py-4');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>nav.classList.add('py-4');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>nav.classList.remove('py-2');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Parallax-ish effect for organic shapes</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('mousemove', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const shapes = document.querySelectorAll('.organic-shape-1, .organic-shape-2');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const x = e.clientX / window.innerWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const y = e.clientY / window.innerHeight;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>shapes.forEach(shape =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>shape.style.transform = `translate(${x * 20}px, ${y * 20}px)`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;&lt;/html&gt;</span></p>
+</body>
+</html>
