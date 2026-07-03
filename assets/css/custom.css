@@ -53,6 +53,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif;
   color: var(--color-text);
