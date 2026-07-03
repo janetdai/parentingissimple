@@ -234,7 +234,7 @@ fetch('/api/contact', {
 
 - **GitHub Pages**：推送至 `gh-pages` 分支或 `docs/` 目錄
 - **Netlify / Vercel**：直接連結 Git repository，零設定自動部署
-- **傳統虛擬主機**：將所有檔案上傳至 `public_html/` 目錄
+- **傳統虛擬主機**：將所有檔案上傳至 `public_html/` 目錄  
 
 ---
 
