@@ -148,25 +148,25 @@
             <div class="row g-4 mb-4">
               <div class="col-sm-6">
                 <label class="form-label fw-bold" style="font-size:.875rem;color:#424844;">家長姓名</label>
-                <input type="text" class="form-control form-control-pei" placeholder="您的姓名" required>
+                <input type="text" id="parentName" name="parentName" class="form-control form-control-pei" placeholder="您的姓名" required>
                 <div class="invalid-feedback">請輸入姓名</div>
               </div>
               <div class="col-sm-6">
                 <label class="form-label fw-bold" style="font-size:.875rem;color:#424844;">聯繫電話</label>
-                <input type="tel" class="form-control form-control-pei" placeholder="0900-000-000" required>
+                <input type="tel" id="phone" name="phone" class="form-control form-control-pei" placeholder="0900-000-000" required>
                 <div class="invalid-feedback">請輸入聯繫電話</div>
               </div>
             </div>
 
             <div class="mb-4">
               <label class="form-label fw-bold" style="font-size:.875rem;color:#424844;">電子郵件</label>
-              <input type="email" class="form-control form-control-pei" placeholder="example@email.com" required>
+              <input type="email" id="email" name="email" class="form-control form-control-pei" placeholder="example@email.com" required>
               <div class="invalid-feedback">請輸入有效的電子郵件</div>
             </div>
 
             <div class="mb-4">
               <label class="form-label fw-bold" style="font-size:.875rem;color:#424844;">孩子年齡</label>
-              <select class="form-select form-select-pei">
+              <select id="childAge" name="childAge" class="form-select form-select-pei">
                 <option>0-2 歲（嬰幼兒期）</option>
                 <option>3-6 歲（學齡前期）</option>
                 <option>7-12 歲（學齡期）</option>
@@ -206,7 +206,7 @@
 
             <div class="mb-4">
               <label class="form-label fw-bold" style="font-size:.875rem;color:#424844;">您目前最關心的議題</label>
-              <textarea class="form-control form-control-pei" rows="4" placeholder="請簡述孩子的情況或您希望諮詢的問題..." style="resize:none;"></textarea>
+              <textarea id="concern" name="concern" class="form-control form-control-pei" rows="4" placeholder="請簡述孩子的情況或您希望諮詢的問題..." style="resize:none;"></textarea>
             </div>
 
             <!-- Submit -->
@@ -221,6 +221,15 @@
                 <i class="bi bi-check-circle-fill text-pei fs-4 me-2"></i>
                 <span class="fw-bold text-pei">已收到您的預約！</span>
                 <p class="mb-0 mt-1" style="font-size:.875rem;color:#424844;">專人將於 2 個工作天內與您聯絡。</p>
+              </div>
+            </div>
+
+            <!-- Error message -->
+            <div id="formError" class="text-center mt-4 d-none">
+              <div class="p-3 rounded-3" style="background:rgba(198,40,40,.08);">
+                <i class="bi bi-exclamation-circle-fill fs-4 me-2" style="color:#b3261e;"></i>
+                <span class="fw-bold" style="color:#b3261e;">送出失敗</span>
+                <p class="formErrorText mb-0 mt-1" style="font-size:.875rem;color:#424844;">請稍後再試一次。</p>
               </div>
             </div>
 
@@ -346,21 +355,102 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-  // Form submit: spinner + success state (replaces temp's alert)
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  // ============================================================
+  // 培兒蒂 - 預約表單設定
+  // 請將下方網址換成部署 Google Apps Script 後取得的「網頁應用程式網址」
+  // 部署步驟請參考 google-apps-script/README.md
+  // ============================================================
+  const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxXL9cgGZU5FIjXTyV-MWkTAdh02m39ozRDi7hDF7TXcBTV9cPrcPDIqFedcGwC4j4rXQ/exec';
+
+  const contactForm = document.getElementById('contactForm');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const submitText = document.getElementById('submitText');
+  const submitSpinner = document.getElementById('submitSpinner');
+  const formSuccessBox = document.getElementById('formSuccess');
+  const formErrorBox = document.getElementById('formError');
+  let isSubmitting = false; // 防止重複送出的旗標
+
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    if (!this.checkValidity()) { this.classList.add('was-validated'); return; }
-    const btn = this.querySelector('button[type=submit]');
-    const txt = document.getElementById('submitText');
-    const spin = document.getElementById('submitSpinner');
-    btn.disabled = true;
-    txt.textContent = '預約發送中...';
-    spin.classList.remove('d-none');
-    setTimeout(() => {
-      btn.classList.add('d-none');
-      document.getElementById('formSuccess').classList.remove('d-none');
-    }, 1500);
+
+    // 前端基本驗證：必填欄位 + Email 格式（沿用瀏覽器原生 HTML5 檢查）
+    if (!contactForm.checkValidity()) {
+      contactForm.classList.add('was-validated');
+      return;
+    }
+
+    // 已在送出中，直接擋掉，避免使用者連點造成重複送出
+    if (isSubmitting) return;
+
+    hideMessages();
+    setSubmittingState(true);
+
+    try {
+      const formData = collectFormData();
+
+      const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+        method: 'POST',
+        // 使用 text/plain 可避免瀏覽器對跨網域請求送出 CORS 預檢（preflight OPTIONS）
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        showSuccessMessage();
+        contactForm.reset();
+        contactForm.classList.remove('was-validated');
+      } else {
+        showErrorMessage(result.message || '送出失敗，請稍後再試一次。');
+        setSubmittingState(false);
+      }
+    } catch (error) {
+      // 網路中斷、Apps Script 網址設定錯誤等狀況會落在這裡
+      showErrorMessage('連線發生問題，請確認網路連線後再試一次。');
+      setSubmittingState(false);
+    }
   });
+
+  // 將表單欄位整理成要送給 Google Apps Script 的資料物件
+  function collectFormData() {
+    const checkedServiceBoxes = contactForm.querySelectorAll('input[name="services"]:checked');
+    const interestedServices = Array.from(checkedServiceBoxes).map(function (checkbox) {
+      return checkbox.value;
+    });
+
+    return {
+      parentName: document.getElementById('parentName').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      childAge: document.getElementById('childAge').value,
+      services: interestedServices,
+      concern: document.getElementById('concern').value.trim()
+    };
+  }
+
+  // 切換「送出中」狀態：停用按鈕並顯示轉圈動畫，避免重複送出
+  function setSubmittingState(submitting) {
+    isSubmitting = submitting;
+    submitButton.disabled = submitting;
+    submitText.textContent = submitting ? '預約發送中...' : '立即預約申請';
+    submitSpinner.classList.toggle('d-none', !submitting);
+  }
+
+  function showSuccessMessage() {
+    submitButton.classList.add('d-none');
+    formSuccessBox.classList.remove('d-none');
+  }
+
+  function showErrorMessage(message) {
+    formErrorBox.querySelector('.formErrorText').textContent = message;
+    formErrorBox.classList.remove('d-none');
+  }
+
+  function hideMessages() {
+    formSuccessBox.classList.add('d-none');
+    formErrorBox.classList.add('d-none');
+  }
 </script>
 </body>
 </html>
