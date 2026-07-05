@@ -49,7 +49,6 @@
     <div class="d-flex gap-3 justify-content-center mb-5">
       <a href="https://www.facebook.com/profile.php?id=100095126599331" class="pei-footer-social-btn" target="_blank"><i class="bi bi-facebook"></i></a>
       <a href="https://www.instagram.com/parentingissimple/" class="pei-footer-social-btn" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="pei-footer-social-btn"><i class="bi bi-line"></i></a>
     </div>
     <p style="font-size:.875rem;color:#424844;opacity:.6;margin:0;">
       © 2024 培兒蒂 Occupational Therapy. All rights reserved.

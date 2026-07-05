@@ -72,29 +72,13 @@
       padding: 2rem;
     }
 
-    /* CTA section */
-    .pei-cta-green {
-      background: #4c6455;
-      border-radius: 48px;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    .pei-cta-green::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 16rem; height: 16rem;
-      background: rgba(255,255,255,.1);
-      border-radius: 50%;
-      filter: blur(40px);
-      transform: translate(50%,-50%);
-    }
-
     @media (max-width: 767.98px) {
       .pei-timeline::before { left: 1rem; }
-      .pei-timeline-dot { left: 1rem; }
-      .pei-tl-offset { margin-left: 2.5rem !important; }
+      /* .pei-timeline-dot sits inside the Bootstrap row (which has a
+         negative -0.5*gutter margin), while the line above is on the
+         unshifted .pei-timeline wrapper — compensate so both align */
+      .pei-timeline-dot { left: calc(1rem + var(--bs-gutter-x) / 2); }
+      .pei-tl-offset { margin-left: 2.5rem !important; width: calc(100% - 2.5rem) !important; max-width: calc(100% - 2.5rem) !important; }
     }
 
     /* Expertise sidebar: only sticky on md+ so it doesn't overlap
@@ -273,7 +257,7 @@
         <!-- Item 1 — right side on desktop -->
         <div class="row pei-timeline-item mb-5 align-items-center" data-fade data-delay="1">
           <div class="col-md-5 d-none d-md-block"></div>
-          <div class="pei-timeline-dot d-none d-md-block"></div>
+          <div class="pei-timeline-dot"></div>
           <div class="col-md-5 offset-md-1 pei-tl-offset">
             <div class="pei-tl-card">
               <span class="pei-badge-pill mb-3 d-inline-block">2023 - 至今</span>
@@ -292,14 +276,14 @@
               <p style="color:#424844;line-height:1.75;margin:0;">專注早期介入、情緒發展與專注力培養，陪伴超過 1000 位發展需求兒童及家庭一起成長。</p>
             </div>
           </div>
-          <div class="pei-timeline-dot d-none d-md-block"></div>
+          <div class="pei-timeline-dot"></div>
           <div class="col-md-5 offset-md-1 d-none d-md-block"></div>
         </div>
 
         <!-- Item 3 — right side on desktop -->
         <div class="row pei-timeline-item align-items-center" data-fade data-delay="3">
           <div class="col-md-5 d-none d-md-block"></div>
-          <div class="pei-timeline-dot d-none d-md-block"></div>
+          <div class="pei-timeline-dot"></div>
           <div class="col-md-5 offset-md-1 pei-tl-offset">
             <div class="pei-tl-card">
               <span class="pei-badge-pill mb-3 d-inline-block">2012</span>
@@ -316,17 +300,17 @@
   <!-- Personal Message CTA -->
   <section style="padding:7rem 0;" data-fade>
     <div class="container" style="max-width:1200px;">
-      <div class="pei-cta-green p-5 p-md-5 text-center" style="padding:4rem 5rem!important;">
+      <div class="pei-cta-card p-4 p-md-5 text-center">
         <div class="position-relative" style="z-index:1;">
-          <h2 class="fw-bold mb-4" style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif;font-size:clamp(1.5rem,3.5vw,2rem);color:#fff;line-height:1.4;">
+          <h2 class="fw-bold mb-4" style="font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif;font-size:clamp(1.75rem,4vw,2.5rem);color:#082014;line-height:1.4;">
             「不要著急，每個孩子都有他綻放的季節。」
           </h2>
-          <p class="mx-auto mb-5" style="max-width:640px;font-size:1.125rem;color:rgba(255,255,255,.9);line-height:1.75;">
+          <p class="mx-auto mb-5" style="max-width:640px;font-size:1.125rem;color:#344c3e;line-height:1.75;">
             我想對各位爸爸媽媽說，您已經做得非常棒了。尋求專業協助並不是代表您的孩子「有問題」，而是因為您深愛著他，希望給他最適合的推手。讓我們一起合作，發現孩子獨一無二的光芒。
           </p>
           <div class="d-flex flex-column flex-sm-row gap-4 justify-content-center">
-            <a href="contact.html" class="btn btn-lg" style="background:#fff;color:#4c6455;border-radius:9999px;padding:.75rem 2.5rem;font-weight:700;transition:all .3s;">聯繫我預約諮詢</a>
-            <a href="article.html" class="btn btn-lg" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:9999px;padding:.75rem 2.5rem;font-weight:600;transition:all .3s;">追蹤日常育兒知識</a>
+            <a href="contact.html" class="btn btn-pei btn-lg rounded-pill" style="box-shadow:0 12px 32px rgba(76,100,85,.25);">聯繫我預約諮詢</a>
+            <a href="article.html" class="btn btn-pei-outline btn-lg rounded-pill">追蹤日常育兒知識</a>
           </div>
         </div>
       </div>
