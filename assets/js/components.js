@@ -14,7 +14,7 @@
   <div class="container" style="max-width:1200px;">
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-pei" href="${base}index.html">
       <img src="${base}assets/images/logo.png" alt="培兒蒂 Logo" style="height:60px;width:auto;">
-      培兒蒂
+      <span style="margin-left:5px;">培兒蒂</span>
     </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="切換導覽列">
       <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,6 @@
         <li class="nav-item"><a class="nav-link" href="${base}professional.html">專業資歷</a></li>
         <li class="nav-item"><a class="nav-link" href="${base}service.html">服務項目</a></li>
         <li class="nav-item"><a class="nav-link" href="${base}article.html">育兒文章</a></li>
-        <li class="nav-item"><a class="nav-link" href="${base}contact.html">聯繫預約</a></li>
       </ul>
       <div class="ms-md-3 mt-2 mt-md-0">
         <a href="${base}contact.html" class="btn btn-pei">立即預約</a>

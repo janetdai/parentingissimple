@@ -96,6 +96,12 @@
       .pei-timeline-dot { left: 1rem; }
       .pei-tl-offset { margin-left: 2.5rem !important; }
     }
+
+    /* Expertise sidebar: only sticky on md+ so it doesn't overlap
+       the bento cards when they stack full-width on mobile */
+    @media (min-width: 768px) {
+      .pei-expertise-sidebar { position: sticky; top: 6rem; }
+    }
   </style>
 </head>
 <body class="pei-page">
@@ -194,7 +200,7 @@
       <div class="row g-5 align-items-start">
 
         <!-- Sticky sidebar -->
-        <div class="col-md-4" style="position:sticky;top:6rem;" data-fade data-delay="1">
+        <div class="col-md-4 pei-expertise-sidebar" data-fade data-delay="1">
           <h2 class="fw-bold mb-4 text-pei" style="font-size:2rem;">專業領域與專長</h2>
           <p class="mb-4" style="color:#424844;line-height:1.75;">專注於 0-12 歲兒童發展，透過多元感官與環境調整，優化孩子的學習與生活能力。</p>
           <div class="d-flex flex-column gap-3">
