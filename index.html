@@ -192,32 +192,36 @@
         <a href="article.html" class="btn btn-pei-outline">查看全部文章</a>
       </div>
       <div class="row g-4">
+        
         <div class="col-6 col-md-4" data-fade data-delay="1">
-          <div class="pei-article-thumb mb-3">
-            <img src="assets/images/hold.png" alt="如何提升孩子的專注力">
-            <div class="pei-hover-overlay"><span class="text-white fw-bold">閱讀更多</span></div>
-          </div>
-          <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;">如何提升孩子的專注力？</h4>
-        </div>
-        <div class="col-6 col-md-4" data-fade data-delay="2">
           <div class="pei-article-thumb mb-3 position-relative" style="background:rgba(143,169,152,.2);">
             <div class="d-flex flex-column align-items-center justify-content-center text-pei p-4 position-absolute top-0 start-0 w-100 h-100" style="z-index:1;">
-              <i class="bi bi-book-half" style="font-size:3.5rem;margin-bottom:.75rem;"></i>
-              <div class="fw-bold">感統遊戲 100 選</div>
+              <i class="bi bi-mic-fill" style="font-size:3.5rem;margin-bottom:.75rem;"></i>
+              <div class="fw-bold">近期公開演講資訊</div>
             </div>
             <div class="pei-hover-overlay"><span class="text-white fw-bold">閱讀更多</span></div>
           </div>
-          <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;">感官統合與日常生活</h4>
+          <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;">活動公告與報名資訊</h4>
         </div>
-        <div class="col-md-4 d-none d-md-block" data-fade data-delay="3">
-          <div class="pei-article-thumb mb-3 position-relative" style="background:rgba(232,188,188,.3);">
-            <div class="d-flex flex-column align-items-center justify-content-center p-4 position-absolute top-0 start-0 w-100 h-100" style="color:#785656;z-index:1;">
-              <i class="bi bi-heart-fill" style="font-size:3.5rem;margin-bottom:.75rem;"></i>
-              <div class="fw-bold">溫柔堅定的教養</div>
+        <!-- 第 2、3 張卡片：由 articles.json 動態載入最新兩篇文章的標題與圖片，見頁尾 <script> -->
+        <div class="col-6 col-md-4" id="homeLatestArticle1" data-fade data-delay="2">
+          <a href="article.html" class="text-decoration-none">
+            <div class="pei-article-thumb mb-3">
+              <img src="" alt="" loading="lazy">
+              <div class="pei-hover-overlay"><span class="text-white fw-bold">閱讀更多</span></div>
             </div>
-            <div class="pei-hover-overlay"><span class="text-white fw-bold">閱讀更多</span></div>
-          </div>
-          <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;">正向教養的實戰練習</h4>
+            <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;"></h4>
+          </a>
+        </div>
+
+        <div class="col-md-4 d-none d-md-block" id="homeLatestArticle2" data-fade data-delay="3">
+          <a href="article.html" class="text-decoration-none">
+            <div class="pei-article-thumb mb-3">
+              <img src="" alt="" loading="lazy">
+              <div class="pei-hover-overlay"><span class="text-white fw-bold">閱讀更多</span></div>
+            </div>
+            <h4 class="fw-bold" style="font-size:1rem;color:#1b1c1b;padding:0 .5rem;"></h4>
+          </a>
         </div>
       </div>
     </div>
@@ -255,5 +259,71 @@
 <!-- Custom JS -->
 <script src="assets/js/components.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+  /* ============================================================
+     首頁「育兒即是藝術」區塊 — 第 2、3 張卡片
+     載入 articles/articles.json 最上方（最新）的兩篇文章標題與圖片
+     第 1 張卡片（近期公開演講資訊）維持固定內容，不受影響
+     ============================================================ */
+  (function () {
+    var ARTICLES_JSON_PATH = 'articles/articles.json';
+    var ARTICLES_DIR = 'articles/';
+    var slots = [
+      document.getElementById('homeLatestArticle1'),
+      document.getElementById('homeLatestArticle2')
+    ];
+
+    // 圖片沒有設定或載入失敗時使用的預設佔位圖（inline SVG，不需要額外圖片檔案）
+    var PLACEHOLDER_IMAGE = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">' +
+      '<rect width="400" height="225" fill="#eef1ee"/>' +
+      '<g fill="none" stroke="#8FA998" stroke-width="3">' +
+      '<rect x="130" y="72" width="140" height="90" rx="8"/>' +
+      '<circle cx="160" cy="100" r="10"/>' +
+      '<path d="M130 145 L175 110 L205 135 L230 115 L270 150"/>' +
+      '</g></svg>'
+    );
+
+    fetch(ARTICLES_JSON_PATH)
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        if (!Array.isArray(data)) throw new Error('articles.json 格式錯誤：最外層必須是陣列');
+
+        // 依 articles.json 陣列順序，最上方視為最新文章
+        data.slice(0, slots.length).forEach(function (item, i) {
+          var slot = slots[i];
+          if (!slot) return;
+
+          var link = slot.querySelector('a');
+          var img = slot.querySelector('img');
+          var title = slot.querySelector('h4');
+
+          link.href = ARTICLES_DIR + item.file;
+          img.src = item.image || PLACEHOLDER_IMAGE;
+          img.alt = item.title;
+          img.addEventListener('error', function () {
+            img.src = PLACEHOLDER_IMAGE; // 圖片路徑失效時，改用預設佔位圖
+          });
+          title.textContent = item.title;
+        });
+
+        // 文章數不足兩篇時，把多出來的卡片隱藏，避免顯示空白卡片
+        slots.slice(data.length).forEach(function (slot) {
+          if (slot) slot.classList.add('d-none');
+        });
+      })
+      .catch(function (err) {
+        // 讀取失敗時，直接隱藏這兩張卡片，避免顯示空白或破圖
+        console.error('首頁載入最新文章失敗：', err);
+        slots.forEach(function (slot) {
+          if (slot) slot.classList.add('d-none');
+        });
+      });
+  })();
+</script>
 </body>
 </html>
