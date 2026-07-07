@@ -58,11 +58,11 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif;
+  font-family: 'Be Vietnam Pro', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Heiti TC', sans-serif;
   color: var(--color-text);
   line-height: 1.85;
-  background-color: #fff;
-  padding-top: var(--navbar-height);
+  background-color: #faf9f6;
+  padding-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,6 +98,7 @@ img { max-width: 100%; height: auto; }
 
 /* 培兒蒂 global utilities (used in shared navbar component) */
 .text-pei { color: #4c6455; }
+.bg-pei   { background-color: #4c6455; }
 .btn-pei {
   background-color: #4c6455; color: #fff;
   border-radius: 9999px !important; padding: .75rem 2.5rem;
@@ -1234,6 +1235,46 @@ img { max-width: 100%; height: auto; }
 /* ============================================================
    Stitch / Migrated — Article page extras
    ============================================================ */
+
+/* Article body template — shared across articles/*.html individual posts */
+.text-sage { color: #8FA998; }
+
+.pei-breadcrumb { font-size: .875rem; color: #727973; }
+.pei-breadcrumb a { color: #727973; text-decoration: none; transition: color .2s; }
+.pei-breadcrumb a:hover { color: #4c6455; }
+
+.pei-article-body { font-size: 1.0625rem; color: #424844; line-height: 1.9; }
+.pei-article-body p { margin-bottom: 1.5rem; }
+.pei-article-body h2 {
+  font-family: 'Plus Jakarta Sans','Noto Sans TC',sans-serif;
+  font-weight: 700; font-size: 1.5rem; color: #1b1c1b;
+  margin: 3rem 0 1.5rem;
+}
+.pei-article-body h3 {
+  font-family: 'Plus Jakarta Sans','Noto Sans TC',sans-serif;
+  font-weight: 700; font-size: 1.1875rem; color: #1b1c1b;
+  margin: 2.25rem 0 .75rem;
+}
+
+.stage-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.stage-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+.stage-card img { width: 100%; display: block; }
+
+.article-cta-banner {
+  display: block;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,.1);
+  transition: transform .3s ease;
+}
+.article-cta-banner:hover { transform: translateY(-4px); }
+.article-cta-banner img { width: 100%; display: block; }
+
 .geometric-decor {
   position: absolute;
   z-index: -1;

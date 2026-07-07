@@ -26,39 +26,8 @@
   <link href="../assets/css/custom.css" rel="stylesheet">
 
   <style>
-    body { background-color: #faf9f6; font-family: 'Be Vietnam Pro', 'Noto Sans TC', sans-serif; padding-top: 0; }
-    .text-pei  { color: #4c6455; }
-    .text-sage { color: #8FA998; }
-
-    /* Breadcrumb */
-    .pei-breadcrumb { font-size: .875rem; color: #727973; }
-    .pei-breadcrumb a { color: #727973; text-decoration: none; transition: color .2s; }
-    .pei-breadcrumb a:hover { color: #4c6455; }
-
-    /* Article prose — long-form body copy */
-    .pei-article-body { font-size: 1.0625rem; color: #424844; line-height: 1.9; }
-    .pei-article-body p { margin-bottom: 1.5rem; }
-    .pei-article-body h2 {
-      font-family: 'Plus Jakarta Sans','Noto Sans TC',sans-serif;
-      font-weight: 700; font-size: 1.5rem; color: #1b1c1b;
-      margin: 3rem 0 1.5rem;
-    }
-    .pei-article-body h3 {
-      font-family: 'Plus Jakarta Sans','Noto Sans TC',sans-serif;
-      font-weight: 700; font-size: 1.1875rem; color: #1b1c1b;
-      margin: 2.25rem 0 .75rem;
-    }
-
-    /* Development milestone graphics (source images already contain full timeline design) */
-    .stage-card {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,.06);
-      transition: transform .3s ease, box-shadow .3s ease;
-      margin-bottom: 1rem;
-    }
-    .stage-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
-    .stage-card img { width: 100%; display: block; }
+    /* Page-scoped: this page's stage-card graphics stack vertically (no row/gap grid), unlike 20260703 */
+    .stage-card { margin-bottom: 1rem; }
 
     /* Warning callout box */
     .pei-warning-box {
@@ -69,17 +38,6 @@
     }
     .pei-warning-box ul { margin: 0; padding-left: 1.25rem; }
     .pei-warning-box li { margin-bottom: .5rem; font-weight: 600; color: #785656; }
-
-    /* CTA banner (source graphic already contains full banner design) */
-    .article-cta-banner {
-      display: block;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0,0,0,.1);
-      transition: transform .3s ease;
-    }
-    .article-cta-banner:hover { transform: translateY(-4px); }
-    .article-cta-banner img { width: 100%; display: block; }
   </style>
 </head>
 <body class="pei-page">
